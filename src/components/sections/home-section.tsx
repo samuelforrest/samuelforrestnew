@@ -24,7 +24,7 @@ export function HomeSection() {
           Samuel Forrest
         </h1>
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Student, Developer, Aviation Enthusiast
+          Student, Tutor, Developer, Aviation Enthusiast
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
           <Button 
@@ -33,21 +33,17 @@ export function HomeSection() {
           >
             Learn more about me
           </Button>
-          <Button 
-            variant="outline" 
-            onClick={() => {
-              const contactSection = document.getElementById("contact");
-              if (contactSection) {
-                window.scrollTo({
-                  top: contactSection.offsetTop - 80,
-                  behavior: "smooth",
-                });
-              }
-            }}
+          </Button>
+          <a
+            href="/assets/cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-6"
           >
-            Get in touch
-          </Button>
+            <Button variant="outline" className="w-full sm:w-auto px-6">
+              Download CV
+            </Button>
+          </a>
         </div>
         
         {/* Social Media Icons */}
