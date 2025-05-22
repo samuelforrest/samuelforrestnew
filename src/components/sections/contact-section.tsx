@@ -1,4 +1,3 @@
-
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -33,9 +32,11 @@ export function ContactSection() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast.success("Message sent! I'll get back to you soon.");
-    form.reset();
+    const subject = encodeURIComponent("Contact from Portfolio");
+    const body = encodeURIComponent(
+      `Name: ${values.name}\nEmail: ${values.email}\n\n${values.message}`
+    );
+    window.location.href = `mailto:sam@samuelforrest.me?subject=${subject}&body=${body}`;
   }
 
   return (
@@ -43,7 +44,7 @@ export function ContactSection() {
       <div className="container-narrow">
         <h2 className="section-heading">Contact Me</h2>
         <p className="text-lg text-muted-foreground mb-8 animate-fade-in">
-          Have a question or want to work together? Feel free to reach out.
+          Have a question or want to work together? Feel free to reach out. Typical response time is within 12 hours.
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
