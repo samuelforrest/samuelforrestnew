@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Instagram, Github, Youtube, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -32,7 +31,6 @@ export function HomeSection() {
             className="px-6"
           >
             Learn more about me
-          </Button>
           </Button>
           <a
             href="/assets/cv.pdf"
