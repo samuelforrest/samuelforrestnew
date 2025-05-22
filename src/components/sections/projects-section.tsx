@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -15,23 +14,26 @@ export function ProjectsSection() {
     {
       title: "Computer Science Blog",
       description: "A blog where I explore AI and cybersecurity topics, sharing insights and learnings from my studies.",
-      tags: ["React", "Next.js", "Tailwind CSS"],
+      tags: ["React", "Research"],
       link: "#blog",
     },
     {
-      title: "EPQ: Supersonic Air Transport",
-      description: "Research project on the reintroduction of supersonic air transport, examining technical and commercial viability.",
+      title: "EPQ (Extended Project Qualification)",
+      description: "For my EPQ, I researched the question: 'To what extent is it feasible to reintroduce commercial supersonic air travel by 2040?' This project involves a detailed investigation into the economic, environmental, regulatory, safety and technological factors.",
       tags: ["Research", "Aviation", "Engineering"],
+      link: "/assets/epq_abstract.pdf"
     },
     {
-      title: "VATSIM Flight Simulator Setup",
-      description: "Custom flight simulation setup for participating in VATSIM events as both a pilot and air traffic controller.",
-      tags: ["Simulation", "Aviation", "Networking"],
+      title: "NEA (Computer Science Non-Examined Assesment)",
+      description: "y project is a stock market simulator app, designed to teach users how buying and selling shares works in a simplified, interactive, yet realistic environment. ",
+      tags: ["Javascript", "Typescript", "Databases", "Documentation", "React Native", "Figma"],
+      link: "/assets/nea_draft.pdf"
     },
     {
-      title: "Personal Website",
-      description: "This website, built to showcase my projects and experience while demonstrating web development skills.",
-      tags: ["React", "TypeScript", "Tailwind CSS"],
+      title: "Notion Book for Computer Science",
+      description: "Alongside my tutoring work, I’ve started creating Computer Science resource packs using Notion, AI tools, and my hands-on experience from both GCSE and A-Level Computing.",
+      tags: ["Notion", "ChatGPT", "Tutoring", "Computer Science"],
+      link: "https://samuelforrest.notion.site/A-Level-Computer-Science-Notes-OCR-H446-Specification-1f6f86b8ee7c807f935ef99dd1e4929f"
     }
   ];
 
