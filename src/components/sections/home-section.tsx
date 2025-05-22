@@ -46,19 +46,19 @@ export function HomeSection() {
         
         {/* Social Media Icons */}
         <div className="flex justify-center gap-6 mt-4">
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
+          <a href="https://www.instagram.com/samueljforrest/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
             <Instagram size={24} />
             <span className="sr-only">Instagram</span>
           </a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
+          <a href="https://github.com/samuelforrest" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
             <Github size={24} />
             <span className="sr-only">GitHub</span>
           </a>
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
+          <a href="https://www.youtube.com/@samueljforrest" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
             <Youtube size={24} />
             <span className="sr-only">YouTube</span>
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
+          <a href="https://www.linkedin.com/in/samueljforrest/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
             <Linkedin size={24} />
             <span className="sr-only">LinkedIn</span>
           </a>
