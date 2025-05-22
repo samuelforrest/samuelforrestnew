@@ -106,7 +106,7 @@ export function AboutSection() {
                       <h5 className="font-medium">Private Tutor – Computer Science</h5>
                       <span className="text-sm text-muted-foreground">Oct 2024-Present</span>
                     </div>
-                    <p className="text-sm mt-1">Tutoring GCSE Computer Science students, providing structured lessons and resources.</p>
+                    <p className="text-sm mt-1">Tutoring GCSE Computer Science students, providing structured lessons and resources. 40+ hours taught.</p>
                   </div>
                   <div>
                     <div className="flex justify-between items-start">
