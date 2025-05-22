@@ -12,25 +12,25 @@ type Project = {
 export function ProjectsSection() {
   const projects: Project[] = [
     {
-      title: "Computer Science Blog",
+      title: "✍️ Computer Science Blog",
       description: "A blog where I explore AI and cybersecurity topics, sharing insights and learnings from my studies.",
       tags: ["React", "Research"],
       link: "#blog",
     },
     {
-      title: "EPQ (Extended Project Qualification)",
+      title: "✈️ EPQ (Extended Project Qualification)",
       description: "For my EPQ, I researched the question: 'To what extent is it feasible to reintroduce commercial supersonic air travel by 2040?' This project involves a detailed investigation into the economic, environmental, regulatory, safety and technological factors.",
       tags: ["Research", "Aviation", "Engineering"],
       link: "/assets/epq_abstract.pdf"
     },
     {
-      title: "NEA (Computer Science Non-Examined Assesment)",
+      title: "💻 NEA (Computer Science Non-Examined Assesment)",
       description: "My NEA is a mobile stock simulator app, designed to teach users how buying and selling shares works in a simplified, interactive, yet realistic environment. ",
       tags: ["Javascript", "Typescript", "Databases", "Documentation", "React Native", "Figma"],
       link: "/assets/nea_draft.pdf"
     },
     {
-      title: "Notion Book for Computer Science",
+      title: "📚 Notion Book for Computer Science",
       description: "Alongside my tutoring work, I’ve started creating Computer Science resource packs using Notion, AI tools, and my hands-on experience from both GCSE and A-Level Computing.",
       tags: ["Notion", "ChatGPT", "Tutoring", "Computer Science"],
       link: "https://samuelforrest.notion.site/A-Level-Computer-Science-Notes-OCR-H446-Specification-1f6f86b8ee7c807f935ef99dd1e4929f"
