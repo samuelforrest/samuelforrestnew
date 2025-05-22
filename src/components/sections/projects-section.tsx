@@ -25,7 +25,7 @@ export function ProjectsSection() {
     },
     {
       title: "NEA (Computer Science Non-Examined Assesment)",
-      description: "y project is a stock market simulator app, designed to teach users how buying and selling shares works in a simplified, interactive, yet realistic environment. ",
+      description: "My NEA is a mobile stock simulator app, designed to teach users how buying and selling shares works in a simplified, interactive, yet realistic environment. ",
       tags: ["Javascript", "Typescript", "Databases", "Documentation", "React Native", "Figma"],
       link: "/assets/nea_draft.pdf"
     },
