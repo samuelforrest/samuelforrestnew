@@ -91,6 +91,20 @@ export function AboutSection() {
                 </div>
                 <p className="text-sm mt-1">Improved application development skills with a bike app startup recently funded by Deliveroo.</p>
               </div>
+              <div>
+                <div className="flex justify-between items-start">
+                  <h5 className="font-medium">3-Day Aerospace Course</h5>
+                  <span className="text-sm text-muted-foreground">Aug-Sept 2024</span>
+                </div>
+                <p className="text-sm mt-1">Attended aerospace course at Kingston University hosted by Virgin Atlantic. Won team competition, improving communication and leadership skills.</p>
+              </div>
+              <div>
+                <div className="flex justify-between items-start">
+                  <h5 className="font-medium">Air Accident Investigation Branch (AAIB)</h5>
+                  <span className="text-sm text-muted-foreground">April 2025</span>
+                </div>
+                <p className="text-sm mt-1">Visited the AAIB and connected with professionals including engineering inspectors and flight data extraction inspectors.</p>
+              </div>
             </div>
           </div>
         </div>

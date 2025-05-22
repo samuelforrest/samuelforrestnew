@@ -1,65 +1,37 @@
 
+import { useState, useEffect } from "react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-
-type BlogPost = {
-  title: string;
-  excerpt: string;
-  date: string;
-  slug: string;
-  category: string;
-};
+import { getAllBlogPosts, type BlogPost } from "@/services/blogService";
 
 const Blog = () => {
-  const blogPosts: BlogPost[] = [
-    {
-      title: "Exploring the Future of AI in Aviation",
-      excerpt: "How artificial intelligence is transforming the aviation industry, from flight planning to maintenance prediction.",
-      date: "May 15, 2024",
-      slug: "ai-in-aviation",
-      category: "Technology",
-    },
-    {
-      title: "The Return of Supersonic Travel",
-      excerpt: "An analysis of new technologies making supersonic commercial flight viable again after Concorde's retirement.",
-      date: "April 28, 2024",
-      slug: "return-of-supersonic-travel",
-      category: "Aviation",
-    },
-    {
-      title: "Introduction to VATSIM Flight Simulation",
-      excerpt: "Getting started with virtual air traffic simulation and building a home cockpit setup for realistic training.",
-      date: "April 2, 2024",
-      slug: "vatsim-introduction",
-      category: "Aviation",
-    },
-    {
-      title: "Understanding Cybersecurity Fundamentals",
-      excerpt: "A beginner's guide to cybersecurity concepts, common threats, and basic protection strategies.",
-      date: "March 20, 2024",
-      slug: "cybersecurity-fundamentals",
-      category: "Security",
-    },
-    {
-      title: "My Experience with the EPQ Process",
-      excerpt: "Reflections on researching and writing an Extended Project Qualification on supersonic air transport.",
-      date: "March 5, 2024",
-      slug: "epq-experience",
-      category: "Education",
-    },
-    {
-      title: "Building My First React Application",
-      excerpt: "Lessons learned and challenges overcome while creating my first React-based web application.",
-      date: "February 18, 2024",
-      slug: "first-react-app",
-      category: "Development",
-    },
-  ];
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  
+  useEffect(() => {
+    async function fetchPosts() {
+      try {
+        const posts = await getAllBlogPosts();
+        setBlogPosts(posts);
+      } catch (error) {
+        console.error("Error fetching blog posts:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchPosts();
+  }, []);
 
   const categories = [...new Set(blogPosts.map(post => post.category))];
+  
+  const filteredPosts = selectedCategory 
+    ? blogPosts.filter(post => post.category === selectedCategory)
+    : blogPosts;
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -75,37 +47,58 @@ const Blog = () => {
           </div>
           
           <div className="mb-8 flex flex-wrap gap-3 justify-center">
-            <Button variant="outline" className="rounded-full">All</Button>
+            <Button 
+              variant={selectedCategory === null ? "default" : "outline"} 
+              className="rounded-full"
+              onClick={() => setSelectedCategory(null)}
+            >
+              All
+            </Button>
             {categories.map((category, index) => (
-              <Button key={index} variant="outline" className="rounded-full">
+              <Button 
+                key={index} 
+                variant={selectedCategory === category ? "default" : "outline"} 
+                className="rounded-full"
+                onClick={() => setSelectedCategory(category)}
+              >
                 {category}
               </Button>
             ))}
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {blogPosts.map((post, index) => (
-              <Card key={index} className="animate-fade-in">
-                <CardHeader className="pb-4">
-                  <div className="mb-2">
-                    <span className="text-xs bg-secondary px-2 py-1 rounded-full">
-                      {post.category}
-                    </span>
-                  </div>
-                  <CardTitle>{post.title}</CardTitle>
-                  <CardDescription>{post.date}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p>{post.excerpt}</p>
-                </CardContent>
-                <CardFooter>
-                  <Link to={`/blog/${post.slug}`}>
-                    <Button variant="outline">Read Post</Button>
-                  </Link>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
+          {loading ? (
+            <div className="flex justify-center p-8">
+              <div className="animate-pulse">Loading posts...</div>
+            </div>
+          ) : filteredPosts.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {filteredPosts.map((post) => (
+                <Card key={post.id} className="animate-fade-in">
+                  <CardHeader className="pb-4">
+                    <div className="mb-2">
+                      <span className="text-xs bg-secondary px-2 py-1 rounded-full">
+                        {post.category}
+                      </span>
+                    </div>
+                    <CardTitle>{post.title}</CardTitle>
+                    <CardDescription>{post.date}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p>{post.excerpt}</p>
+                  </CardContent>
+                  <CardFooter>
+                    <Link to={`/blog/${post.slug}`}>
+                      <Button variant="outline">Read Post</Button>
+                    </Link>
+                  </CardFooter>
+                </Card>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center p-8">
+              <p>No blog posts available in this category.</p>
+            </div>
+          )}
         </div>
       </main>
       
