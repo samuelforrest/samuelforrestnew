@@ -42,21 +42,20 @@ export function BlogSection() {
             featuredPosts.map((post) => (
               <Card key={post.id} className="animate-fade-in overflow-hidden">
                 <div className="flex flex-col md:flex-row">
-                  <div className="md:w-1/4 bg-muted">
-                    <AspectRatio ratio={16/9} className="h-full">
-                      {post.cover_image && (
-                        <img 
-                          src={post.cover_image} 
-                          alt={post.title} 
-                          className="object-cover w-full h-full"
-                        />
-                      )}
-                      {!post.cover_image && (
-                        <div className="flex items-center justify-center w-full h-full bg-muted">
-                          <p className="text-muted-foreground">No image</p>
-                        </div>
-                      )}
-                    </AspectRatio>
+                  <div className="md:w-1/4 bg-muted h-full">
+                    {post.cover_image && (
+                      <img 
+                        src={post.cover_image} 
+                        alt={post.title} 
+                        className="object-cover w-full h-full"
+                        style={{ height: "100%" }}
+                      />
+                    )}
+                    {!post.cover_image && (
+                      <div className="flex items-center justify-center w-full h-full bg-muted">
+                        <p className="text-muted-foreground">No image</p>
+                      </div>
+                    )}
                   </div>
                   <div className="md:w-3/4">
                     <CardHeader className="pb-2">

@@ -76,20 +76,18 @@ const Blog = () => {
               {filteredPosts.map((post) => (
                 <Card key={post.id} className="animate-fade-in overflow-hidden">
                   <div className="w-full h-48 bg-muted">
-                    <AspectRatio ratio={16/9} className="h-full">
-                      {post.cover_image && (
-                        <img 
-                          src={post.cover_image} 
-                          alt={post.title} 
-                          className="object-cover w-full h-full"
-                        />
-                      )}
-                      {!post.cover_image && (
-                        <div className="flex items-center justify-center w-full h-full bg-muted">
-                          <p className="text-muted-foreground">No image</p>
-                        </div>
-                      )}
-                    </AspectRatio>
+                    {post.cover_image && (
+                      <img 
+                        src={post.cover_image} 
+                        alt={post.title} 
+                        className="object-cover w-full h-full"
+                      />
+                    )}
+                    {!post.cover_image && (
+                      <div className="flex items-center justify-center w-full h-full bg-muted">
+                        <p className="text-muted-foreground">No image</p>
+                      </div>
+                    )}
                   </div>
                   <CardHeader className="pb-2">
                     <div className="mb-2">
