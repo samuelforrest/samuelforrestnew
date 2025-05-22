@@ -57,77 +57,81 @@ export function AboutSection() {
           </div>
         </div>
         
-        <h3 className="text-2xl font-bold mb-6 font-serif animate-fade-in">Skills & Experience</h3>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div className="animate-fade-in">
-            <h4 className="text-xl font-medium mb-4">Technical Skills</h4>
-            <div className="flex flex-wrap gap-2">
-              {skills.map(skill => (
-                <span 
-                  key={skill}
-                  className="px-3 py-1 bg-secondary rounded-full text-sm"
-                >
-                  {skill}
-                </span>
-              ))}
+          {/* Left column: Skills, Achievements & Interests */}
+          <div>
+            <div className="animate-fade-in mb-8">
+              <h4 className="text-xl font-bold mb-4 font-serif">Technical Skills</h4>
+              <div className="flex flex-wrap gap-2">
+                {skills.map(skill => (
+                  <span 
+                    key={skill}
+                    className="px-3 py-1 bg-secondary rounded-full text-sm"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+            
+            <div className="animate-fade-in mb-8">
+              <h4 className="text-xl font-bold mb-4 font-serif">Achievements</h4>
+              <ul className="list-disc pl-5 space-y-2">
+                <li>Academic scholarship for excellence (2022 & Sixth Form)</li>
+                <li>Duke of Edinburgh Award (Bronze & Silver)</li>
+                <li>Music – Grade 7 Saxophone and Grade 4 Piano</li>
+                <li>Won aerospace competition hosted by Virgin Atlantic</li>
+              </ul>
+            </div>
+            
+            <div className="animate-fade-in">
+              <h4 className="text-xl font-bold mb-4 font-serif">Interests</h4>
+              <ul className="list-disc pl-5 space-y-2">
+                <li>Flight simulation enthusiast (VATSIM events as pilot and air traffic controller)</li>
+                <li>Rowed for three years, earning medals in various races</li>
+                <li>Running a Computer Science Blog exploring AI and cybersecurity topics</li>
+                <li>Aerospace engineering and aviation technology</li>
+              </ul>
             </div>
           </div>
           
+          {/* Right column: Work Experience Card */}
           <div className="animate-fade-in">
-            <h4 className="text-xl font-medium mb-4">Work Experience</h4>
-            <div className="space-y-4">
-              <div>
-                <div className="flex justify-between items-start">
-                  <h5 className="font-medium">Private Tutor – Computer Science</h5>
-                  <span className="text-sm text-muted-foreground">Oct 2024-Present</span>
+            <Card className="h-full">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-4 font-serif">Work Experience</h3>
+                <div className="space-y-4">
+                  <div>
+                    <div className="flex justify-between items-start">
+                      <h5 className="font-medium">Private Tutor – Computer Science</h5>
+                      <span className="text-sm text-muted-foreground">Oct 2024-Present</span>
+                    </div>
+                    <p className="text-sm mt-1">Tutoring GCSE Computer Science students, providing structured lessons and resources.</p>
+                  </div>
+                  <div>
+                    <div className="flex justify-between items-start">
+                      <h5 className="font-medium">App Development Shadowing – HUDJO</h5>
+                      <span className="text-sm text-muted-foreground">Aug-Sept 2024</span>
+                    </div>
+                    <p className="text-sm mt-1">Improved application development skills with a bike app startup recently funded by Deliveroo.</p>
+                  </div>
+                  <div>
+                    <div className="flex justify-between items-start">
+                      <h5 className="font-medium">3-Day Aerospace Course</h5>
+                      <span className="text-sm text-muted-foreground">Aug-Sept 2024</span>
+                    </div>
+                    <p className="text-sm mt-1">Attended aerospace course at Kingston University hosted by Virgin Atlantic. Won team competition, improving communication and leadership skills.</p>
+                  </div>
+                  <div>
+                    <div className="flex justify-between items-start">
+                      <h5 className="font-medium">Air Accident Investigation Branch (AAIB)</h5>
+                      <span className="text-sm text-muted-foreground">April 2025</span>
+                    </div>
+                    <p className="text-sm mt-1">Visited the AAIB and connected with professionals including engineering inspectors and flight data extraction inspectors.</p>
+                  </div>
                 </div>
-                <p className="text-sm mt-1">Tutoring GCSE Computer Science students, providing structured lessons and resources.</p>
-              </div>
-              <div>
-                <div className="flex justify-between items-start">
-                  <h5 className="font-medium">App Development Shadowing – HUDJO</h5>
-                  <span className="text-sm text-muted-foreground">Aug-Sept 2024</span>
-                </div>
-                <p className="text-sm mt-1">Improved application development skills with a bike app startup recently funded by Deliveroo.</p>
-              </div>
-              <div>
-                <div className="flex justify-between items-start">
-                  <h5 className="font-medium">3-Day Aerospace Course</h5>
-                  <span className="text-sm text-muted-foreground">Aug-Sept 2024</span>
-                </div>
-                <p className="text-sm mt-1">Attended aerospace course at Kingston University hosted by Virgin Atlantic. Won team competition, improving communication and leadership skills.</p>
-              </div>
-              <div>
-                <div className="flex justify-between items-start">
-                  <h5 className="font-medium">Air Accident Investigation Branch (AAIB)</h5>
-                  <span className="text-sm text-muted-foreground">April 2025</span>
-                </div>
-                <p className="text-sm mt-1">Visited the AAIB and connected with professionals including engineering inspectors and flight data extraction inspectors.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="animate-fade-in">
-            <h4 className="text-xl font-medium mb-4">Achievements</h4>
-            <ul className="list-disc pl-5 space-y-2">
-              <li>Academic scholarship for excellence (2022 & Sixth Form)</li>
-              <li>Duke of Edinburgh Award (Bronze & Silver)</li>
-              <li>Music – Grade 7 Saxophone and Grade 4 Piano</li>
-              <li>Won aerospace competition hosted by Virgin Atlantic</li>
-            </ul>
-          </div>
-          
-          <div className="animate-fade-in">
-            <h4 className="text-xl font-medium mb-4">Interests</h4>
-            <ul className="list-disc pl-5 space-y-2">
-              <li>Flight simulation enthusiast (VATSIM events as pilot and air traffic controller)</li>
-              <li>Rowed for three years, earning medals in various races</li>
-              <li>Running a Computer Science Blog exploring AI and cybersecurity topics</li>
-              <li>Aerospace engineering and aviation technology</li>
-            </ul>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>

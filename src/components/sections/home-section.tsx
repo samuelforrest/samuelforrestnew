@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Instagram, Github, Youtube, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function HomeSection() {
   const scrollToAbout = () => {
@@ -25,7 +26,7 @@ export function HomeSection() {
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
           Student, Developer, Aviation Enthusiast
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
           <Button 
             onClick={scrollToAbout} 
             className="px-6"
@@ -47,6 +48,26 @@ export function HomeSection() {
           >
             Get in touch
           </Button>
+        </div>
+        
+        {/* Social Media Icons */}
+        <div className="flex justify-center gap-6 mt-4">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
+            <Instagram size={24} />
+            <span className="sr-only">Instagram</span>
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
+            <Github size={24} />
+            <span className="sr-only">GitHub</span>
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
+            <Youtube size={24} />
+            <span className="sr-only">YouTube</span>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
+            <Linkedin size={24} />
+            <span className="sr-only">LinkedIn</span>
+          </a>
         </div>
       </div>
       
