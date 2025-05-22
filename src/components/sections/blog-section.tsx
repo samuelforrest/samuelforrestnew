@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { getAllBlogPosts, type BlogPost } from "@/services/blogService";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 export function BlogSection() {
   const [featuredPosts, setFeaturedPosts] = useState<BlogPost[]>([]);
@@ -38,20 +39,40 @@ export function BlogSection() {
               <div className="animate-pulse">Loading posts...</div>
             </div>
           ) : featuredPosts.length > 0 ? (
-            featuredPosts.map((post, index) => (
-              <Card key={post.id} className="animate-fade-in">
-                <CardHeader className="pb-4">
-                  <CardTitle>{post.title}</CardTitle>
-                  <CardDescription>{post.date}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p>{post.excerpt}</p>
-                </CardContent>
-                <CardFooter>
-                  <Link to={`/blog/${post.slug}`}>
-                    <Button variant="outline">Read Post</Button>
-                  </Link>
-                </CardFooter>
+            featuredPosts.map((post) => (
+              <Card key={post.id} className="animate-fade-in overflow-hidden">
+                <div className="flex flex-col md:flex-row">
+                  <div className="md:w-1/4 bg-muted">
+                    <AspectRatio ratio={16/9} className="h-full">
+                      {post.cover_image && (
+                        <img 
+                          src={post.cover_image} 
+                          alt={post.title} 
+                          className="object-cover w-full h-full"
+                        />
+                      )}
+                      {!post.cover_image && (
+                        <div className="flex items-center justify-center w-full h-full bg-muted">
+                          <p className="text-muted-foreground">No image</p>
+                        </div>
+                      )}
+                    </AspectRatio>
+                  </div>
+                  <div className="md:w-3/4">
+                    <CardHeader className="pb-2">
+                      <CardTitle>{post.title}</CardTitle>
+                      <CardDescription>{post.date}</CardDescription>
+                    </CardHeader>
+                    <CardContent className="pb-2">
+                      <p>{post.preview || post.excerpt}</p>
+                    </CardContent>
+                    <CardFooter>
+                      <Link to={`/blog/${post.slug}`}>
+                        <Button variant="outline">Read Post</Button>
+                      </Link>
+                    </CardFooter>
+                  </div>
+                </div>
               </Card>
             ))
           ) : (

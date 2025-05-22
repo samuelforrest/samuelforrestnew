@@ -11,6 +11,7 @@ export type BlogPost = {
   author: string;
   content?: string;
   cover_image?: string;
+  preview?: string;
 };
 
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
@@ -28,8 +29,9 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
   return data.map(post => ({
     id: post.id,
     title: post.title,
-    // Generate excerpt from content if not provided
+    // Use preview if available, otherwise generate excerpt from content
     excerpt: post.content ? post.content.substring(0, 150) + '...' : '',
+    preview: post.preview || null,
     date: new Date(post.created_at).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
@@ -66,6 +68,7 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> 
     id: post.id,
     title: post.title,
     excerpt: post.content ? post.content.substring(0, 150) + '...' : '',
+    preview: post.preview || null,
     date: new Date(post.created_at).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',

@@ -17,6 +17,7 @@ export type Database = {
           cover_image: string
           created_at: string
           id: string
+          preview: string | null
           title: string
         }
         Insert: {
@@ -26,6 +27,7 @@ export type Database = {
           cover_image: string
           created_at?: string
           id?: string
+          preview?: string | null
           title: string
         }
         Update: {
@@ -35,6 +37,7 @@ export type Database = {
           cover_image?: string
           created_at?: string
           id?: string
+          preview?: string | null
           title?: string
         }
         Relationships: []

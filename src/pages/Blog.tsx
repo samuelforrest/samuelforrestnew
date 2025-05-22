@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { getAllBlogPosts, type BlogPost } from "@/services/blogService";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const Blog = () => {
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
@@ -73,8 +74,24 @@ const Blog = () => {
           ) : filteredPosts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {filteredPosts.map((post) => (
-                <Card key={post.id} className="animate-fade-in">
-                  <CardHeader className="pb-4">
+                <Card key={post.id} className="animate-fade-in overflow-hidden">
+                  <div className="w-full h-48 bg-muted">
+                    <AspectRatio ratio={16/9} className="h-full">
+                      {post.cover_image && (
+                        <img 
+                          src={post.cover_image} 
+                          alt={post.title} 
+                          className="object-cover w-full h-full"
+                        />
+                      )}
+                      {!post.cover_image && (
+                        <div className="flex items-center justify-center w-full h-full bg-muted">
+                          <p className="text-muted-foreground">No image</p>
+                        </div>
+                      )}
+                    </AspectRatio>
+                  </div>
+                  <CardHeader className="pb-2">
                     <div className="mb-2">
                       <span className="text-xs bg-secondary px-2 py-1 rounded-full">
                         {post.category}
@@ -83,8 +100,8 @@ const Blog = () => {
                     <CardTitle>{post.title}</CardTitle>
                     <CardDescription>{post.date}</CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <p>{post.excerpt}</p>
+                  <CardContent className="pb-2">
+                    <p>{post.preview || post.excerpt}</p>
                   </CardContent>
                   <CardFooter>
                     <Link to={`/blog/${post.slug}`}>
