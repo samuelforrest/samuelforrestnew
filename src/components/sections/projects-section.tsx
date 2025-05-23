@@ -80,7 +80,7 @@ export function ProjectsSection() {
       </div>
       <div className="mt-6 flex justify-center mb-0">
         <Button variant="link" className="text-sm p-0 flex items-center gap-1" asChild>
-          <a href="/projects.tsx">
+          <a href="/projects">
             View Other Projects
             <span aria-hidden="true">→</span>
           </a>
