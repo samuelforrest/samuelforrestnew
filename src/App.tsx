@@ -9,7 +9,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
-import Projects from "./pages/projects";
+import Projects from "./pages/Projects";
 
 const queryClient = new QueryClient();
 
