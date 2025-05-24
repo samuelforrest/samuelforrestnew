@@ -12,6 +12,7 @@ export type BlogPost = {
   content?: string;
   cover_image?: string;
   preview?: string;
+  tags?: string[];
 };
 
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
@@ -42,7 +43,8 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
     category: post.category,
     author: post.author || 'Samuel Forrest',
     content: post.content,
-    cover_image: post.cover_image
+    cover_image: post.cover_image,
+    tags: post.tags || []
   }));
 }
 
@@ -78,6 +80,7 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> 
     category: post.category,
     author: post.author || 'Samuel Forrest',
     content: post.content,
-    cover_image: post.cover_image
+    cover_image: post.cover_image,
+    tags: post.tags || []
   };
 }
