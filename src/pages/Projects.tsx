@@ -31,6 +31,11 @@ const Projects = () => {
               qr.samuelforrest.me - - - - - A QR code generator (Lovable)
             </a>
           </li>
+          <li>
+            <a href="https://pmt.samuelforrest.me" className="text-primary underline">
+              pmt.samuelforrest.me - - - - - A cool alternative to pmt, a way to find and record your past papers (Lovable)
+            </a>
+          </li>
         </ul>
       </main>
       <Footer />
