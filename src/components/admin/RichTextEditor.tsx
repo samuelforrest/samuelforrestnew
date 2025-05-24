@@ -2,8 +2,6 @@
 import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import Image from '@tiptap/extension-image';
-import CodeBlockLowlight from '@tiptap/extension-code-block-lowlight';
-import { createLowlight } from 'lowlight';
 import { Button } from "@/components/ui/button";
 import { 
   Bold, 
@@ -15,9 +13,6 @@ import {
   Code, 
   Image as ImageIcon 
 } from "lucide-react";
-
-// Create lowlight instance
-const lowlight = createLowlight();
 
 interface RichTextEditorProps {
   content: string;
@@ -32,9 +27,6 @@ export function RichTextEditor({ content, onChange }: RichTextEditorProps) {
         HTMLAttributes: {
           class: 'max-w-full h-auto rounded-lg',
         },
-      }),
-      CodeBlockLowlight.configure({
-        lowlight,
       }),
     ],
     content,
@@ -115,8 +107,8 @@ export function RichTextEditor({ content, onChange }: RichTextEditorProps) {
           type="button"
           variant="outline"
           size="sm"
-          onClick={() => editor.chain().focus().toggleCodeBlock().run()}
-          className={editor.isActive('codeBlock') ? 'bg-secondary' : ''}
+          onClick={() => editor.chain().focus().toggleCode().run()}
+          className={editor.isActive('code') ? 'bg-secondary' : ''}
         >
           <Code className="h-4 w-4" />
         </Button>
