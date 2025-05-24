@@ -3,7 +3,7 @@ import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import Image from '@tiptap/extension-image';
 import CodeBlockLowlight from '@tiptap/extension-code-block-lowlight';
-import { lowlight } from 'lowlight';
+import { createLowlight } from 'lowlight';
 import { Button } from "@/components/ui/button";
 import { 
   Bold, 
@@ -15,6 +15,9 @@ import {
   Code, 
   Image as ImageIcon 
 } from "lucide-react";
+
+// Create lowlight instance
+const lowlight = createLowlight();
 
 interface RichTextEditorProps {
   content: string;
