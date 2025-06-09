@@ -6,7 +6,6 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/contexts/AuthContext';
 import { toast } from 'sonner';
-import { formatDistanceToNow } from 'date-fns';
 
 interface Comment {
   id: string;
@@ -40,11 +39,11 @@ export function CommentsSection({ blogId }: CommentsSectionProps) {
       const { data, error } = await supabase
         .from('comments')
         .select(`
-          *,
-          profiles (
-            full_name,
-            email
-          )
+          id,
+          content,
+          created_at,
+          user_id,
+          profiles!inner(full_name, email)
         `)
         .eq('blog_id', blogId)
         .order('created_at', { ascending: false });
@@ -61,7 +60,6 @@ export function CommentsSection({ blogId }: CommentsSectionProps) {
 
   const handleSubmitComment = async (e: React.FormEvent) => {
     e.preventDefault();
-    
     if (!user) {
       toast.error('Please sign in to comment');
       return;
@@ -86,9 +84,9 @@ export function CommentsSection({ blogId }: CommentsSectionProps) {
       if (error) throw error;
 
       setNewComment('');
-      toast.success('Comment added successfully!');
-      fetchComments(); // Refresh comments
-    } catch (error: any) {
+      toast.success('Comment added successfully');
+      fetchComments();
+    } catch (error) {
       console.error('Error adding comment:', error);
       toast.error('Failed to add comment');
     } finally {
@@ -96,26 +94,22 @@ export function CommentsSection({ blogId }: CommentsSectionProps) {
     }
   };
 
-  const getUserDisplayName = (comment: Comment) => {
-    return comment.profiles?.full_name || comment.profiles?.email || 'Anonymous User';
-  };
-
   return (
     <div className="space-y-6">
-      <h3 className="text-xl font-bold">Comments ({comments.length})</h3>
+      <h3 className="text-2xl font-bold">Comments</h3>
       
       {user ? (
         <Card>
           <CardHeader>
-            <h4 className="font-semibold">Add a comment</h4>
+            <h4 className="text-lg font-semibold">Add a comment</h4>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmitComment} className="space-y-4">
               <Textarea
                 value={newComment}
                 onChange={(e) => setNewComment(e.target.value)}
-                placeholder="Share your thoughts..."
-                rows={3}
+                placeholder="Write your comment here..."
+                rows={4}
               />
               <Button type="submit" disabled={submitting}>
                 {submitting ? 'Posting...' : 'Post Comment'}
@@ -125,37 +119,35 @@ export function CommentsSection({ blogId }: CommentsSectionProps) {
         </Card>
       ) : (
         <Card>
-          <CardContent className="pt-6 text-center">
-            <p className="text-muted-foreground">
-              Please <a href="/auth" className="text-primary hover:underline">sign in</a> to leave a comment.
-            </p>
+          <CardContent className="pt-6">
+            <p className="text-muted-foreground">Please sign in to leave a comment.</p>
           </CardContent>
         </Card>
       )}
 
       <div className="space-y-4">
         {loading ? (
-          <div className="text-center p-4">Loading comments...</div>
-        ) : comments.length === 0 ? (
-          <div className="text-center p-4 text-muted-foreground">
-            No comments yet. Be the first to comment!
-          </div>
-        ) : (
+          <div className="text-center py-4">Loading comments...</div>
+        ) : comments.length > 0 ? (
           comments.map((comment) => (
             <Card key={comment.id}>
-              <CardContent className="pt-6">
+              <CardContent className="pt-4">
                 <div className="flex justify-between items-start mb-2">
-                  <span className="font-semibold text-sm">
-                    {getUserDisplayName(comment)}
+                  <span className="font-semibold">
+                    {comment.profiles?.full_name || comment.profiles?.email || 'Anonymous'}
                   </span>
-                  <span className="text-xs text-muted-foreground">
-                    {formatDistanceToNow(new Date(comment.created_at), { addSuffix: true })}
+                  <span className="text-sm text-muted-foreground">
+                    {new Date(comment.created_at).toLocaleDateString()}
                   </span>
                 </div>
                 <p className="text-sm">{comment.content}</p>
               </CardContent>
             </Card>
           ))
+        ) : (
+          <div className="text-center py-8 text-muted-foreground">
+            No comments yet. Be the first to comment!
+          </div>
         )}
       </div>
     </div>
