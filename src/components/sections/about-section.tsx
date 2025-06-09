@@ -77,10 +77,11 @@ export function AboutSection() {
             <div className="animate-fade-in mb-8">
               <h4 className="text-xl font-bold mb-4 font-serif">Achievements</h4>
               <ul className="list-disc pl-5 space-y-2">
-                <li>Academic scholarship for excellence (2022 & Sixth Form)</li>
-                <li>Duke of Edinburgh Award (Bronze & Silver)</li>
+                <li>Academic scholarships for excellence (2022 & Sixth Form)</li>
+                <li>Duke of Edinburgh Award (Bronze & Silver), demonstrating resilience and teamwork.</li>
                 <li>Music – Grade 7 Saxophone and Grade 4 Piano</li>
                 <li>Won aerospace competition hosted by Virgin Atlantic</li>
+                <li>Won the KTHack25, with a functional MVP, recieving £300</li>
               </ul>
             </div>
             
