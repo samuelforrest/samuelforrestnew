@@ -23,8 +23,29 @@ export function BlogPostForm({ post, onSave, onCancel }: BlogPostFormProps) {
   const [category, setCategory] = useState(post?.category || "");
   const [author, setAuthor] = useState(post?.author || "Samuel Forrest");
   const [coverImage, setCoverImage] = useState(post?.cover_image || "");
+  const [slug, setSlug] = useState(post?.slug || "");
   const [tags, setTags] = useState(post?.tags?.join(", ") || "");
   const [loading, setLoading] = useState(false);
+
+  // Generate slug from title
+  const generateSlug = (title: string) => {
+    return title
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, '') // Remove special characters
+      .replace(/\s+/g, '-') // Replace spaces with hyphens
+      .replace(/-+/g, '-') // Replace multiple hyphens with single hyphen
+      .trim();
+  };
+
+  const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newTitle = e.target.value;
+    setTitle(newTitle);
+    
+    // Auto-generate slug if it's empty or matches the previous title's slug
+    if (!slug || slug === generateSlug(post?.title || "")) {
+      setSlug(generateSlug(newTitle));
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -40,6 +61,7 @@ export function BlogPostForm({ post, onSave, onCancel }: BlogPostFormProps) {
         category,
         author,
         cover_image: coverImage,
+        slug: slug || generateSlug(title),
         tags: tagsArray.length > 0 ? tagsArray : null,
       };
 
@@ -83,9 +105,23 @@ export function BlogPostForm({ post, onSave, onCancel }: BlogPostFormProps) {
             <Input
               id="title"
               value={title}
-              onChange={(e) => setTitle(e.target.value)}
+              onChange={handleTitleChange}
               required
             />
+          </div>
+
+          <div>
+            <Label htmlFor="slug">URL Slug</Label>
+            <Input
+              id="slug"
+              value={slug}
+              onChange={(e) => setSlug(e.target.value)}
+              placeholder="url-friendly-version-of-title"
+              required
+            />
+            <p className="text-sm text-muted-foreground mt-1">
+              This will be used in the URL: /blog/{slug}
+            </p>
           </div>
 
           <div>

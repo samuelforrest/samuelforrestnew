@@ -18,6 +18,7 @@ export type Database = {
           created_at: string
           id: string
           preview: string | null
+          slug: string | null
           tags: string[] | null
           title: string
         }
@@ -29,6 +30,7 @@ export type Database = {
           created_at?: string
           id?: string
           preview?: string | null
+          slug?: string | null
           tags?: string[] | null
           title: string
         }
@@ -40,6 +42,7 @@ export type Database = {
           created_at?: string
           id?: string
           preview?: string | null
+          slug?: string | null
           tags?: string[] | null
           title?: string
         }
