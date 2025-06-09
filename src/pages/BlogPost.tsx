@@ -6,6 +6,8 @@ import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { getBlogPostBySlug, type BlogPost } from "@/services/blogService";
+import { LikeButton } from "@/components/LikeButton";
+import { CommentsSection } from "@/components/CommentsSection";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -101,18 +103,19 @@ const BlogPost = () => {
           )}
           
           <div 
-            className="prose prose-lg dark:prose-invert max-w-none"
+            className="prose prose-lg dark:prose-invert max-w-none mb-8"
             dangerouslySetInnerHTML={{ __html: post.content || '' }}
           />
-          
-          <div className="border-t mt-16 pt-8">
-            <h3 className="text-xl font-bold mb-4">Share this post</h3>
+
+          <div className="flex items-center gap-4 mb-8 py-4 border-y">
+            <LikeButton blogId={post.id} />
             <div className="flex gap-4">
-              <Button variant="outline" size="sm">Twitter</Button>
-              <Button variant="outline" size="sm">LinkedIn</Button>
-              <Button variant="outline" size="sm">Facebook</Button>
+              <Button variant="outline" size="sm">Share on Twitter</Button>
+              <Button variant="outline" size="sm">Share on LinkedIn</Button>
             </div>
           </div>
+
+          <CommentsSection blogId={post.id} />
         </article>
       </main>
       
