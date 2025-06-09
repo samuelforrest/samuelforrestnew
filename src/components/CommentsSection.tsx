@@ -36,20 +36,32 @@ export function CommentsSection({ blogId }: CommentsSectionProps) {
   const fetchComments = async () => {
     setLoading(true);
     try {
-      const { data, error } = await supabase
+      // First get the comments
+      const { data: commentsData, error: commentsError } = await supabase
         .from('comments')
-        .select(`
-          id,
-          content,
-          created_at,
-          user_id,
-          profiles!inner(full_name, email)
-        `)
+        .select('*')
         .eq('blog_id', blogId)
         .order('created_at', { ascending: false });
 
-      if (error) throw error;
-      setComments(data || []);
+      if (commentsError) throw commentsError;
+
+      // Then get the profile data for each comment
+      const commentsWithProfiles = await Promise.all(
+        (commentsData || []).map(async (comment) => {
+          const { data: profile } = await supabase
+            .from('profiles')
+            .select('full_name, email')
+            .eq('id', comment.user_id)
+            .single();
+
+          return {
+            ...comment,
+            profiles: profile || null
+          };
+        })
+      );
+
+      setComments(commentsWithProfiles);
     } catch (error) {
       console.error('Error fetching comments:', error);
       toast.error('Failed to load comments');
