@@ -110,8 +110,36 @@ const BlogPost = () => {
           <div className="flex items-center gap-4 mb-8 py-4 border-y">
             <LikeButton blogId={post.id} />
             <div className="flex gap-4">
-              <Button variant="outline" size="sm">Share on Twitter</Button>
-              <Button variant="outline" size="sm">Share on LinkedIn</Button>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => {
+                  const url = encodeURIComponent(window.location.href);
+                  const text = encodeURIComponent(post.title);
+                  window.open(
+                    `https://twitter.com/intent/tweet?url=${url}&text=${text}`,
+                    "_blank",
+                    "noopener,noreferrer"
+                  );
+                }}
+              >
+                Share on Twitter
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => {
+                  const url = encodeURIComponent(window.location.href);
+                  const title = encodeURIComponent(post.title);
+                  window.open(
+                    `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`,
+                    "_blank",
+                    "noopener,noreferrer"
+                  );
+                }}
+              >
+                Share on LinkedIn
+              </Button>
             </div>
           </div>
 
