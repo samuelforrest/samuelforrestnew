@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Header } from "@/components/header";
@@ -8,6 +7,7 @@ import { ArrowLeft } from "lucide-react";
 import { getBlogPostBySlug, type BlogPost } from "@/services/blogService";
 import { LikeButton } from "@/components/LikeButton";
 import { CommentsSection } from "@/components/CommentsSection";
+import "../components/QuillContent.css";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -103,7 +103,7 @@ const BlogPost = () => {
           )}
           
           <div 
-            className="prose prose-lg dark:prose-invert max-w-none mb-8"
+            className="ql-editor prose prose-lg dark:prose-invert max-w-none mb-8"
             dangerouslySetInnerHTML={{ __html: post.content || '' }}
           />
 
