@@ -30,10 +30,10 @@ export function ProjectsSection() {
       link: "/assets/nea_draft.pdf"
     },
     {
-      title: "📚 Notion Book for Computer Science",
-      description: "Alongside my tutoring work, I’ve started creating Computer Science resource packs using Notion, AI tools, and my hands-on experience from both GCSE and A-Level Computing.",
-      tags: ["Notion", "ChatGPT", "Tutoring", "Computer Science"],
-      link: "https://samuelforrest.notion.site/A-Level-Computer-Science-Notes-OCR-H446-Specification-1f6f86b8ee7c807f935ef99dd1e4929f"
+      title: "📚 Noteboom FM - The Revision Podcast",
+      description: "With the use of advanced AI, I have created a podcast in which 2 AI hosts discuss topics, or entire sylabbuss for A Level and GCSE, helping students who are auditory learners.",
+      tags: ["ChatGPT, Podcasting, Spotify, AI"],
+      link: "https://open.spotify.com/show/568FPtKmIlTgWgaDAfap03"
     }
   ];
 
