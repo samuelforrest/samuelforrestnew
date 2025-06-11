@@ -3,7 +3,6 @@ import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import Image from '@tiptap/extension-image';
 import TextAlign from '@tiptap/extension-text-align';
-import FontFamily from '@tiptap/extension-font-family';
 import TextStyle from '@tiptap/extension-text-style';
 import { Button } from "@/components/ui/button";
 import { 
@@ -43,7 +42,6 @@ export function RichTextEditor({ content, onChange }: RichTextEditorProps) {
         },
       }),
       TextStyle,
-      FontFamily,
       TextAlign.configure({
         types: ['heading', 'paragraph'],
       }),
