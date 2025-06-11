@@ -41,14 +41,13 @@ export function BlogSection() {
           ) : featuredPosts.length > 0 ? (
             featuredPosts.map((post) => (
               <Card key={post.id} className="animate-fade-in overflow-hidden">
-                <div className="flex flex-col md:flex-row">
-                  <div className="md:w-1/4 bg-muted h-full">
+                <div className="flex flex-col md:flex-row h-full">
+                  <div className="md:w-1/4 h-48 md:h-auto">
                     {post.cover_image && (
                       <img 
                         src={post.cover_image} 
                         alt={post.title} 
                         className="object-cover w-full h-full"
-                        style={{ height: "100%" }}
                       />
                     )}
                     {!post.cover_image && (
@@ -57,12 +56,12 @@ export function BlogSection() {
                       </div>
                     )}
                   </div>
-                  <div className="md:w-3/4">
+                  <div className="md:w-3/4 flex flex-col">
                     <CardHeader className="pb-2">
                       <CardTitle>{post.title}</CardTitle>
                       <CardDescription>{post.date}</CardDescription>
                     </CardHeader>
-                    <CardContent className="pb-2">
+                    <CardContent className="pb-2 flex-grow">
                       <p>{post.preview || post.excerpt}</p>
                     </CardContent>
                     <CardFooter>
