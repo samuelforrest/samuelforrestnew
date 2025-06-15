@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 
 export function AboutSection() {
@@ -83,7 +82,7 @@ export function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Work Experience Card */}
           <div className="animate-fade-in [animation-delay:1000ms]">
-            <Card className="h-full shadow-sm hover:shadow-md transition-shadow duration-300">
+            <Card className="shadow-sm hover:shadow-md transition-shadow duration-300">
               <CardContent className="p-6">
                 <h3 className="text-2xl font-bold mb-6 font-serif">Work Experience</h3>
                 <div className="space-y-6">
