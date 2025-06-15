@@ -12,8 +12,8 @@ type Project = {
 export function ProjectsSection() {
   const projects: Project[] = [
     {
-      title: "✍️ Computer Science Blog",
-      description: "A blog where I explore AI and cybersecurity topics, sharing insights and learnings from my studies.",
+      title: "✍️ Blog",
+      description: "My blog where I explore Computer Science, AI and aviation topics in detail, sharing insights from my studies outside of school.",
       tags: ["React", "Research"],
       link: "#blog",
     },
