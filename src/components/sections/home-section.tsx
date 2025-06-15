@@ -72,7 +72,7 @@ export function HomeSection() {
           size="icon" 
           onClick={scrollToAbout}
           aria-label="Scroll down"
-          className="hover:scale-110 transition-transform duration-200"
+          className="hover:scale-110 transition-transform duration-200 animate-bounce"
         >
           <ArrowDown className="h-5 w-5" />
         </Button>
