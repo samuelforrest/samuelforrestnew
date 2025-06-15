@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -56,7 +55,7 @@ export default function Auth() {
           <CardHeader>
             <CardTitle>{isLogin ? 'Sign In' : 'Sign Up'}</CardTitle>
             <CardDescription>
-              {isLogin ? 'Welcome back! Please sign in to your account.' : 'Create a new account to get started.'}
+              {isLogin ? 'Welcome back! Please sign in to your account.' : 'Create a new account to interact with the blog.'}
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -96,9 +95,12 @@ export default function Auth() {
                 />
               </div>
               
-              <Button type="submit" className="w-full" disabled={loading}>
-                {loading ? 'Loading...' : (isLogin ? 'Sign In' : 'Sign Up')}
+              <Button type="submit" className="w-full">
+                Sign Up
               </Button>
+              <p className="text-xs text-muted-foreground mt-2 text-center">
+                An email from Supabase will be sent to you. You must click "Verify Email" in that email, then return to this page and sign in.
+              </p>
             </form>
             
             <div className="mt-4 text-center">
