@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 
 export function AboutSection() {
@@ -11,14 +12,29 @@ export function AboutSection() {
     "Public Speaking"
   ];
 
+  const achievements = [
+    "Academic scholarships for excellence (2022 & Sixth Form)",
+    "Duke of Edinburgh Award (Bronze & Silver), demonstrating resilience and teamwork",
+    "Music – Grade 7 Saxophone and Grade 4 Piano",
+    "Won aerospace competition hosted by Virgin Atlantic",
+    "Won the KTHack25, with a functional MVP, receiving £300"
+  ];
+
+  const interests = [
+    "Flight simulation enthusiast (VATSIM events as pilot and air traffic controller)",
+    "Rowed for three years, earning medals in various races",
+    "Running a Computer Science Blog exploring AI and cybersecurity topics",
+    "Aerospace engineering and aviation technology"
+  ];
+
   return (
     <section id="about" className="section bg-secondary/30">
       <div className="container-narrow">
-        <h2 className="section-heading animate-fade-in">About Me</h2>
+        <h2 className="section-heading animate-fade-in opacity-0 [animation-fill-mode:forwards]">About Me</h2>
         
         {/* Introduction and Education Row */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mb-16">
-          <div className="col-span-1 lg:col-span-3 animate-fade-in [animation-delay:200ms]">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mb-20">
+          <div className="col-span-1 lg:col-span-3 animate-fade-in opacity-0 [animation-delay:200ms] [animation-fill-mode:forwards]">
             <div className="space-y-6">
               <p className="text-lg leading-relaxed">
                 I'm a highly motivated student with a keen interest in technology, aviation, and engineering. 
@@ -35,8 +51,8 @@ export function AboutSection() {
             </div>
           </div>
           
-          <div className="col-span-1 lg:col-span-2 animate-fade-in [animation-delay:400ms]">
-            <Card className="h-full shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div className="col-span-1 lg:col-span-2 animate-fade-in opacity-0 [animation-delay:400ms] [animation-fill-mode:forwards]">
+            <Card className="shadow-sm hover:shadow-md transition-shadow duration-300">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-6 font-serif">Education</h3>
                 <div className="space-y-6">
@@ -63,13 +79,13 @@ export function AboutSection() {
         </div>
         
         {/* Skills Section */}
-        <div className="mb-16 animate-fade-in [animation-delay:600ms]">
+        <div className="mb-20 animate-fade-in opacity-0 [animation-delay:600ms] [animation-fill-mode:forwards]">
           <h4 className="text-2xl font-bold mb-6 font-serif">Technical Skills</h4>
           <div className="flex flex-wrap gap-3">
             {skills.map((skill, index) => (
               <span 
                 key={skill}
-                className="px-4 py-2 bg-secondary rounded-full text-sm hover:bg-secondary/80 transition-colors duration-200 animate-fade-in"
+                className="px-4 py-2 bg-secondary rounded-full text-sm hover:bg-secondary/80 transition-colors duration-200 animate-fade-in opacity-0 [animation-fill-mode:forwards]"
                 style={{ animationDelay: `${800 + index * 100}ms` }}
               >
                 {skill}
@@ -81,7 +97,7 @@ export function AboutSection() {
         {/* Main Content Grid - Work Experience and Personal Details */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Work Experience Card */}
-          <div className="animate-fade-in [animation-delay:1000ms]">
+          <div className="animate-fade-in opacity-0 [animation-delay:1000ms] [animation-fill-mode:forwards]">
             <Card className="shadow-sm hover:shadow-md transition-shadow duration-300">
               <CardContent className="p-6">
                 <h3 className="text-2xl font-bold mb-6 font-serif">Work Experience</h3>
@@ -121,51 +137,27 @@ export function AboutSection() {
           
           {/* Achievements and Interests Column */}
           <div className="space-y-8">
-            <div className="animate-fade-in [animation-delay:1200ms]">
+            <div className="animate-fade-in opacity-0 [animation-delay:1200ms] [animation-fill-mode:forwards]">
               <h4 className="text-2xl font-bold mb-6 font-serif">Achievements</h4>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors duration-200">
-                  <span className="text-primary mt-1">🏆</span>
-                  <p className="text-sm">Academic scholarships for excellence (2022 & Sixth Form)</p>
-                </div>
-                <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors duration-200">
-                  <span className="text-primary mt-1">🥇</span>
-                  <p className="text-sm">Duke of Edinburgh Award (Bronze & Silver), demonstrating resilience and teamwork.</p>
-                </div>
-                <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors duration-200">
-                  <span className="text-primary mt-1">🎵</span>
-                  <p className="text-sm">Music – Grade 7 Saxophone and Grade 4 Piano</p>
-                </div>
-                <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors duration-200">
-                  <span className="text-primary mt-1">✈️</span>
-                  <p className="text-sm">Won aerospace competition hosted by Virgin Atlantic</p>
-                </div>
-                <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors duration-200">
-                  <span className="text-primary mt-1">💻</span>
-                  <p className="text-sm">Won the KTHack25, with a functional MVP, receiving £300</p>
-                </div>
+              <div className="space-y-3">
+                {achievements.map((achievement, index) => (
+                  <div key={index} className="flex items-start space-x-4 animate-fade-in opacity-0 [animation-fill-mode:forwards]" style={{ animationDelay: `${1400 + index * 150}ms` }}>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-sm leading-relaxed">{achievement}</p>
+                  </div>
+                ))}
               </div>
             </div>
             
-            <div className="animate-fade-in [animation-delay:1400ms]">
+            <div className="animate-fade-in opacity-0 [animation-delay:2200ms] [animation-fill-mode:forwards]">
               <h4 className="text-2xl font-bold mb-6 font-serif">Interests</h4>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors duration-200">
-                  <span className="text-primary mt-1">🛩️</span>
-                  <p className="text-sm">Flight simulation enthusiast (VATSIM events as pilot and air traffic controller)</p>
-                </div>
-                <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors duration-200">
-                  <span className="text-primary mt-1">🚣</span>
-                  <p className="text-sm">Rowed for three years, earning medals in various races</p>
-                </div>
-                <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors duration-200">
-                  <span className="text-primary mt-1">📝</span>
-                  <p className="text-sm">Running a Computer Science Blog exploring AI and cybersecurity topics</p>
-                </div>
-                <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors duration-200">
-                  <span className="text-primary mt-1">🚀</span>
-                  <p className="text-sm">Aerospace engineering and aviation technology</p>
-                </div>
+              <div className="space-y-3">
+                {interests.map((interest, index) => (
+                  <div key={index} className="flex items-start space-x-4 animate-fade-in opacity-0 [animation-fill-mode:forwards]" style={{ animationDelay: `${2400 + index * 150}ms` }}>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-sm leading-relaxed">{interest}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

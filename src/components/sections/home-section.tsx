@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Instagram, Github, Youtube, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -18,17 +19,17 @@ export function HomeSection() {
       id="home" 
       className="relative min-h-screen flex flex-col items-center justify-center text-center px-6"
     >
-      <div className="animate-fade-in">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 font-serif">
+      <div className="animate-fade-in opacity-0 [animation-fill-mode:forwards]">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4 font-serif animate-fade-in opacity-0 [animation-delay:200ms] [animation-fill-mode:forwards]">
           Samuel Forrest
         </h1>
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+        <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-fade-in opacity-0 [animation-delay:400ms] [animation-fill-mode:forwards]">
           Student, Tutor, Developer, Aviation Enthusiast
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-in opacity-0 [animation-delay:600ms] [animation-fill-mode:forwards]">
           <Button 
             onClick={scrollToAbout} 
-            className="px-6"
+            className="px-6 hover:scale-105 transition-transform duration-200"
           >
             Learn more about me
           </Button>
@@ -38,39 +39,40 @@ export function HomeSection() {
             rel="noopener noreferrer"
             className="px-6"
           >
-            <Button variant="outline" className="w-full sm:w-auto px-6">
+            <Button variant="outline" className="w-full sm:w-auto px-6 hover:scale-105 transition-transform duration-200">
               Download CV
             </Button>
           </a>
         </div>
         
         {/* Social Media Icons */}
-        <div className="flex justify-center gap-6 mt-4">
-          <a href="https://www.instagram.com/samueljforrest/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
+        <div className="flex justify-center gap-6 mt-4 animate-fade-in opacity-0 [animation-delay:800ms] [animation-fill-mode:forwards]">
+          <a href="https://www.instagram.com/samueljforrest/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-all duration-200 hover:scale-110">
             <Instagram size={24} />
             <span className="sr-only">Instagram</span>
           </a>
-          <a href="https://github.com/samuelforrest" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
+          <a href="https://github.com/samuelforrest" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-all duration-200 hover:scale-110">
             <Github size={24} />
             <span className="sr-only">GitHub</span>
           </a>
-          <a href="https://www.youtube.com/@samueljforrest" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
+          <a href="https://www.youtube.com/@samueljforrest" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-all duration-200 hover:scale-110">
             <Youtube size={24} />
             <span className="sr-only">YouTube</span>
           </a>
-          <a href="https://www.linkedin.com/in/samueljforrest/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
+          <a href="https://www.linkedin.com/in/samueljforrest/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-all duration-200 hover:scale-110">
             <Linkedin size={24} />
             <span className="sr-only">LinkedIn</span>
           </a>
         </div>
       </div>
       
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce animate-fade-in opacity-0 [animation-delay:1000ms] [animation-fill-mode:forwards]">
         <Button 
           variant="ghost" 
           size="icon" 
           onClick={scrollToAbout}
           aria-label="Scroll down"
+          className="hover:scale-110 transition-transform duration-200"
         >
           <ArrowDown className="h-5 w-5" />
         </Button>
