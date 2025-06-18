@@ -70,7 +70,7 @@ export function AboutSection() {
                       <span className="text-sm text-muted-foreground">2021-2024</span>
                     </div>
                     <p className="text-sm text-muted-foreground mb-1">GCSE Student</p>
-                    <p className="text-sm">Multiple Grade 9s (A*) including Physics, Chemistry, Biology, Computer Science</p>
+                    <p className="text-sm">8x Grade 9s (A*) including Triple Science, Computer Science, RE, Geography, English Lang/Lit</p>
                   </div>
                 </div>
               </CardContent>
