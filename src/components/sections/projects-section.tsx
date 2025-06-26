@@ -30,7 +30,7 @@ export function ProjectsSection() {
       link: "/assets/nea_draft.pdf"
     },
     {
-      title: "📚 Noteboom FM - The Revision Podcast",
+      title: "The Revision Podcast",
       description: "With the use of advanced AI, I have created a podcast in which 2 AI hosts discuss topics, or entire sylabbuss for A Level and GCSE, helping students who are auditory learners.",
       tags: ["ChatGPT, Podcasting, Spotify, AI"],
       link: "https://open.spotify.com/show/568FPtKmIlTgWgaDAfap03"
