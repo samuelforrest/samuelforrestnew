@@ -7,9 +7,10 @@ export function AboutSection() {
     "TypeScript", 
     "React Native",
     "Git/GitHub",
+    "AI",
     "Problem Solving",
     "Communication",
-    "Public Speaking"
+    "Public Speaking",
   ];
 
   const achievements = [
@@ -80,7 +81,7 @@ export function AboutSection() {
         
         {/* Skills Section */}
         <div className="mb-20 animate-fade-in opacity-0 [animation-delay:1200ms] [animation-fill-mode:forwards]">
-          <h4 className="text-2xl font-bold mb-6 font-serif">Technical Skills</h4>
+          <h4 className="text-2xl font-bold mb-6 font-serif">Soft & Technical Skills</h4>
           <div className="flex flex-wrap gap-3">
             {skills.map((skill, index) => (
               <span 

@@ -12,13 +12,13 @@ const Projects = () => {
         </p>
         <ul className="list-disc pl-6 space-y-3 text-lg">
           <li>
-            <a href="https://ai.samuelforrest.me" className="text-primary underline">
-              ai.samuelforrest.me - - - - - An AI Homework Helper landing page (Lovable)
+            <a href="https://www.bionewsweekly.com" className="text-primary underline">
+              bionewsweekly.com - - - - - A biology news website made for a client (Professional)
             </a>
           </li>
           <li>
-            <a href="https://old.samuelforrest.me" className="text-primary underline">
-              old.samuelforrest.me - - - - - My Old Website - up until May 2025 (Personal)
+            <a href="https://ai.samuelforrest.me" className="text-primary underline">
+              ai.samuelforrest.me - - - - - An AI Homework Helper landing page (Lovable)
             </a>
           </li>
           <li>
