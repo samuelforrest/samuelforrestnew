@@ -41,13 +41,13 @@ export function Footer() {
               About
             </a>
             <a
-              href="/projects"
+              href="/#projects"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               Projects
             </a>
             <a
-              href="/blog"
+              href="https://www.samuelforrest.me/blog"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               Blog
