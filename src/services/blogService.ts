@@ -26,7 +26,7 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
     return [];
   }
   
-  // Transform the data to match our BlogPost type
+  // Transform the data to match our BlogPost type ok
   return data.map(post => ({
     id: post.id,
     title: post.title,
