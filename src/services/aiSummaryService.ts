@@ -37,14 +37,14 @@ Title: "${title}"
 Content: "${textContent}"
 
 Please provide:
-1. A concise 2-3 sentence summary of the main topic and key insights
-2. Exactly 3 key bullet points highlighting the most important takeaways
-3. Keep the tone professional but accessible
+1. A concise 1-2 sentence summary of the main topic and key insights
+2. Exactly 3 brief bullet points highlighting the most important takeaways (each point should be 10-15 words max)
+3. Keep the tone professional but accessible and concise
 
 IMPORTANT: Respond ONLY with valid JSON in this exact format (no markdown, no code blocks, no extra text):
 {
-  "summary": "Your 2-3 sentence summary here",
-  "keyPoints": ["Point 1", "Point 2", "Point 3"]
+  "summary": "Your 1-2 sentence summary here",
+  "keyPoints": ["Brief Point 1", "Brief Point 2", "Brief Point 3"]
 }
 `;
 
