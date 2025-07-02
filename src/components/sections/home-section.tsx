@@ -27,22 +27,31 @@ export function HomeSection() {
           Student, Tutor, Developer, Aviation Enthusiast
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-in opacity-0 [animation-delay:600ms] [animation-fill-mode:forwards]">
-          <Button 
-            onClick={scrollToAbout} 
-            className="px-6 hover:scale-105 transition-transform duration-200"
-          >
-            Learn more about me
-          </Button>
-          <a
-            href="/assets/cv.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6"
-          >
-            <Button variant="outline" className="w-full sm:w-auto px-6 hover:scale-105 transition-transform duration-200">
-              Download CV
+          <div className="sm:order-first">
+            <Button 
+              onClick={scrollToAbout} 
+              className="w-full sm:w-auto px-6 hover:scale-105 transition-transform duration-200"
+            >
+              More about me
             </Button>
-          </a>
+          </div>
+          <div className="flex flex-row sm:contents gap-4 justify-center">
+            <Link to="/blog" className="flex-1 sm:flex-none">
+              <Button variant="outline" className="w-full sm:w-auto px-6 hover:scale-105 transition-transform duration-200">
+                Sam's Blog
+              </Button>
+            </Link>
+            <a
+              href="/assets/cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 sm:flex-none"
+            >
+              <Button variant="outline" className="w-full sm:w-auto px-6 hover:scale-105 transition-transform duration-200">
+                Download CV
+              </Button>
+            </a>
+          </div>
         </div>
         
         {/* Social Media Icons */}
