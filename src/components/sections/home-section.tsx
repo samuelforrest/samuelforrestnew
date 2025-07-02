@@ -75,7 +75,7 @@ export function HomeSection() {
         </div>
       </div>
       
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce animate-fade-in opacity-0 [animation-delay:1000ms] [animation-fill-mode:forwards]">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-fade-in opacity-0 [animation-delay:1000ms] [animation-fill-mode:forwards]">
         <Button 
           variant="ghost" 
           size="icon" 
