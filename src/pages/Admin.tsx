@@ -9,6 +9,7 @@ import { getAllBlogPosts, type BlogPost } from "@/services/blogService";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { Edit, Trash2, Plus } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const Admin = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -93,6 +94,15 @@ const Admin = () => {
 
   return (
     <div className="min-h-screen bg-background p-8">
+      <SEO
+        title="Admin Dashboard"
+        description="Administrative dashboard for managing blog posts and website content. Access restricted to authorized users only."
+        keywords="admin dashboard, blog management, content management, Samuel Forrest admin, website administration"
+        ogTitle="Admin Dashboard - Samuel Forrest"
+        ogDescription="Administrative interface for managing blog posts and website content."
+        canonicalUrl="https://samuelforrest.me/admin"
+        robots="noindex, nofollow"
+      />
       <div className="max-w-6xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-3xl font-bold">Blog Admin</h1>

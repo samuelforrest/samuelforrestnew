@@ -2,10 +2,19 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const Projects = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO
+        title="Projects"
+        description="Explore Samuel Forrest's portfolio of web development projects including client work, personal projects, and hackathon winners. From biology news websites to environmental apps and QR generators."
+        keywords="Samuel Forrest projects, web development portfolio, client websites, React projects, JavaScript projects, Python projects, hackathon projects, bionewsweekly, zoecc, verdapp, QR generator, student developer portfolio, software engineering projects"
+        ogTitle="Samuel Forrest - Development Projects & Portfolio"
+        ogDescription="View my collection of web development projects including client work, personal projects, and award-winning hackathon submissions."
+        canonicalUrl="https://samuelforrest.me/projects"
+      />
       <Header />
       <main className="flex-grow mt-20 pt-6">
         <div className="container-narrow px-4">

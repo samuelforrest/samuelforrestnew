@@ -8,6 +8,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { toast } from 'sonner';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
+import { SEO } from '@/components/SEO';
 
 export default function Auth() {
   const [isLogin, setIsLogin] = useState(true);
@@ -39,8 +40,8 @@ export default function Auth() {
           toast.success('Account created! Please check your email to verify your account.');
         }
       }
-    } catch (error: any) {
-      toast.error(error.message);
+    } catch (error: unknown) {
+      toast.error(error instanceof Error ? error.message : 'An error occurred');
     } finally {
       setLoading(false);
     }
@@ -48,6 +49,15 @@ export default function Auth() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO
+        title="Sign In"
+        description="Sign in to your Samuel Forrest account to access exclusive content, comment on blog posts, and engage with the community."
+        keywords="Samuel Forrest login, sign in, user account, blog comments, authentication, user registration, member access"
+        ogTitle="Sign In - Samuel Forrest"
+        ogDescription="Access your account to comment on blog posts and engage with exclusive content."
+        canonicalUrl="https://samuelforrest.me/auth"
+        robots="noindex, nofollow"
+      />
       <Header />
       
       <main className="flex-grow flex items-center justify-center mt-20 pt-6 pb-16">

@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { getAllBlogPosts, type BlogPost } from "@/services/blogService";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { SEO } from "@/components/SEO";
 
 const Blog = () => {
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
@@ -36,6 +37,14 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO
+        title="Blog"
+        description="Read Samuel Forrest's blog posts covering technology, software development, aviation, student life, and insights from A Level Computer Science studies. Stay updated with the latest in tech and programming."
+        keywords="Samuel Forrest blog, technology blog, software development articles, programming tutorials, aviation blog, computer science blog, student developer blog, A Level Computer Science, coding insights, tech articles, programming tips, software engineering blog"
+        ogTitle="Samuel Forrest - Tech Blog & Insights"
+        ogDescription="Discover articles on software development, technology trends, aviation, and student life from an A Level Computer Science student."
+        canonicalUrl="https://samuelforrest.me/blog"
+      />
       <Header />
       
       <main className="flex-grow mt-20 pt-6">

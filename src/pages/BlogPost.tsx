@@ -8,6 +8,7 @@ import { getBlogPostBySlug, type BlogPost } from "@/services/blogService";
 import { LikeButton } from "@/components/LikeButton";
 import { CommentsSection } from "@/components/CommentsSection";
 import { AISummaryComponent } from "@/components/AISummaryComponent";
+import { SEO } from "@/components/SEO";
 import "../components/QuillContent.css";
 
 const BlogPost = () => {
@@ -71,6 +72,16 @@ const BlogPost = () => {
   
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO
+        title={post?.title || "Blog Post"}
+        description={post?.excerpt || "Read this blog post by Samuel Forrest covering technology, software development, and more."}
+        keywords={`${post?.title || "blog post"}, Samuel Forrest blog, ${post?.category || "technology"}, software development, programming, tech articles`}
+        ogTitle={post?.title || "Blog Post - Samuel Forrest"}
+        ogDescription={post?.excerpt || "Read this blog post by Samuel Forrest covering technology, software development, and more."}
+        ogType="article"
+        ogImage={post?.cover_image || "/assets/logo-samuelforrestwebsite.png"}
+        canonicalUrl={`https://samuelforrest.me/blog/${slug}`}
+      />
       <Header />
       
       <main className="flex-grow mt-20 pt-6 pb-16">
