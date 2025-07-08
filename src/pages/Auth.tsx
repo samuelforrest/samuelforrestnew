@@ -51,12 +51,11 @@ export default function Auth() {
     <div className="min-h-screen flex flex-col">
       <SEO
         title="Sign In"
-        description="Sign in to your Samuel Forrest account to access exclusive content, comment on blog posts, and engage with the community."
-        keywords="Samuel Forrest login, sign in, user account, blog comments, authentication, user registration, member access"
+        description="Sign in to your Samuel Forrest account to comment, like and engage with the blog."
+        keywords="Samuel Forrest login, sign in, user account, blog comments, authentication, user registration, member access, samuelforrest.me"
         ogTitle="Sign In - Samuel Forrest"
-        ogDescription="Access your account to comment on blog posts and engage with exclusive content."
+        ogDescription="Sign in to your Samuel Forrest account to comment, like and engage with the blog."
         canonicalUrl="https://samuelforrest.me/auth"
-        robots="noindex, nofollow"
       />
       <Header />
       

@@ -9,10 +9,10 @@ const Projects = () => {
     <div className="min-h-screen flex flex-col">
       <SEO
         title="Projects"
-        description="Explore Samuel Forrest's portfolio of web development projects including client work, personal projects, and hackathon winners. From biology news websites to environmental apps and QR generators."
-        keywords="Samuel Forrest projects, web development portfolio, client websites, React projects, JavaScript projects, Python projects, hackathon projects, bionewsweekly, zoecc, verdapp, QR generator, student developer portfolio, software engineering projects"
-        ogTitle="Samuel Forrest - Development Projects & Portfolio"
-        ogDescription="View my collection of web development projects including client work, personal projects, and award-winning hackathon submissions."
+        description="A collection of Samuel's best projects: client websites, personal projects and Hackathon winners."
+        keywords="Samuel Forrest projects, web development portfolio, client websites, React projects, JavaScript projects, Python projects, hackathon projects, bionewsweekly, zoecc, verdapp, QR generator, student developer portfolio, software engineering projects, zoecc.co.uk, verdapp.xyz, qr.samuelforrest.me, samuelforrest.me"
+        ogTitle="Samuel Forrest | Projects"
+        ogDescription="A collection of Samuel's best projects: client websites, personal projects and Hackathon winners."
         canonicalUrl="https://samuelforrest.me/projects"
       />
       <Header />

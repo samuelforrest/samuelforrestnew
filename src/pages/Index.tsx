@@ -12,11 +12,11 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO
-        title="Home"
-        description="Samuel Forrest - A Level Student, Software Developer, Aviation Enthusiast & Tutor. Explore my projects, blog posts, and professional journey in computer science and software engineering."
-        keywords="Samuel Forrest, CV, Resume, Computer Science Student, Software Engineer, Developer, Aviation Enthusiast, Greater London, UK, A Level Computer Science, Programmer, React, JavaScript, Python, OCR Computer Science, Edexcel Maths, AQA Physics, Tech CV, Student Developer, App Developer, Software Engineering, Teddington, Weybridge, Sixth Form Student"
-        ogTitle="Samuel Forrest - Student Developer & Aviation Enthusiast"
-        ogDescription="A Level Computer Science student passionate about software development and aviation. Discover my projects, blog, and professional journey."
+        title="Samuel Forrest | CV"
+        description="Samuel Forrest - Student, Developer, Aviation Enthusiast & Tutor. Explore my CV, Projects and Blog."
+        keywords="Samuel Forrest, CV, Samuel Forrest CV, Resume, Computer Science Student, Software Engineer, Developer, Aviation Enthusiast, Greater London, UK, A Level Computer Science, Programmer, React, JavaScript, Python, OCR Computer Science, Edexcel Maths, AQA Physics, Tech CV, Student Developer, App Developer, Software Engineering, Teddington, Weybridge, Sixth Form Student, samuelforrest.me, Sam Forrest"
+        ogTitle="Samuel Forrest - Student, Developer, Aviation Enthusiast & Tutor"
+        ogDescription="Samuel Forrest - Student, Developer, Aviation Enthusiast & Tutor. Explore my CV, Projects and Blog."
         canonicalUrl="https://samuelforrest.me/"
       />
       <Header />
