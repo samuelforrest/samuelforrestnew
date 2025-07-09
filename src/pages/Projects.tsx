@@ -227,6 +227,48 @@ const Projects = () => {
                   </div>
                 </div>
               </li>
+
+              <li className="bg-card border-2 rounded-lg p-4 hover:shadow-md transition-all duration-200">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                  <div className="flex items-start gap-4 flex-1">
+                    <div className="w-12 h-12 rounded-lg overflow-hidden border-2 border-border flex-shrink-0">
+                      <img 
+                        src="/" 
+                        alt="verdapp.xyz logo" 
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                          const nextSibling = e.currentTarget.nextElementSibling as HTMLElement;
+                          if (nextSibling) {
+                            nextSibling.style.display = 'flex';
+                            nextSibling.classList.remove('hidden');
+                          }
+                        }}
+                      />
+                      <div className="w-full h-full bg-muted rounded-lg items-center justify-center text-xs text-muted-foreground hidden">SF</div>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-primary mb-1">ScreenFine</h3>
+                      <p className="text-sm text-muted-foreground mb-3"><b>Conceptual app idea: </b>Real financial concequences if you go over screen time limits.</p>
+                      <div className="flex gap-2">
+                        <Button size="sm" asChild>
+                          <a href="https://screenfine.netlify.app" target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="w-4 h-4 mr-1" />
+                            View Site
+                          </a>
+                        </Button>
+                        <Button size="sm" variant="outline" asChild>
+                          <a href="https://github.com/samuelforrest/screenfine.netlify.app" target="_blank" rel="noopener noreferrer">
+                            <Github className="w-4 h-4 mr-1" />
+                            GitHub
+                          </a>
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
             </ul>
           </div>
           
