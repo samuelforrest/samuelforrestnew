@@ -79,22 +79,6 @@ export function AboutSection() {
           </div>
         </div>
         
-        {/* Skills Section */}
-        <div className="mb-20 animate-fade-in opacity-0 [animation-delay:1200ms] [animation-fill-mode:forwards]">
-          <h4 className="text-2xl font-bold mb-6 font-serif">Soft & Technical Skills</h4>
-          <div className="flex flex-wrap gap-3">
-            {skills.map((skill, index) => (
-              <span 
-                key={skill}
-                className="px-4 py-2 bg-secondary rounded-full text-sm hover:bg-secondary/80 transition-colors duration-200 animate-fade-in opacity-0 [animation-fill-mode:forwards]"
-                style={{ animationDelay: `${1400 + index * 100}ms` }}
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
-        
         {/* Main Content Grid - Work Experience and Personal Details */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Work Experience Card */}
@@ -108,7 +92,14 @@ export function AboutSection() {
                       <h5 className="font-medium">Private Tutor – Computer Science</h5>
                       <span className="text-sm text-muted-foreground">Oct 2024-Present</span>
                     </div>
-                    <p className="text-sm">Tutoring GCSE Computer Science students, providing structured lessons and resources. 40+ hours taught.</p>
+                    <p className="text-sm">Tutoring GCSE Computer Science students, providing structured lessons and resources. 45+ hours taught.</p>
+                  </div>
+                                    <div className="border-l-2 border-primary/20 pl-4 hover:border-primary/40 transition-colors duration-200">
+                    <div className="flex justify-between items-start mb-2">
+                      <h5 className="font-medium">Freelance Web Developer</h5>
+                      <span className="text-sm text-muted-foreground">May 2025-Present</span>
+                    </div>
+                    <p className="text-sm">Delivering full-stack responsive websites to clients, providing maintenance and improving SEO. 3 paid projects delivered.</p>
                   </div>
                   <div className="border-l-2 border-primary/20 pl-4 hover:border-primary/40 transition-colors duration-200">
                     <div className="flex justify-between items-start mb-2">
@@ -171,6 +162,21 @@ export function AboutSection() {
                       </p>
                     )}
                   </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="animate-fade-in opacity-0 [animation-delay:3300ms] [animation-fill-mode:forwards]">
+              <h4 className="text-2xl font-bold mb-6 font-serif">Soft & Technical Skills</h4>
+              <div className="flex flex-wrap gap-3">
+                {skills.map((skill, index) => (
+                  <span 
+                    key={skill}
+                    className="px-4 py-2 bg-secondary rounded-full text-sm hover:bg-secondary/80 transition-colors duration-200 animate-fade-in opacity-0 [animation-fill-mode:forwards]"
+                    style={{ animationDelay: `${3500 + index * 100}ms` }}
+                  >
+                    {skill}
+                  </span>
                 ))}
               </div>
             </div>
