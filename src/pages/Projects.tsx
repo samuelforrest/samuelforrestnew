@@ -282,6 +282,18 @@ const Projects = () => {
               </a>
             </Button>
           </div>
+
+          <div className="mt-16 text-center">
+            <h2 className="text-2xl font-bold mb-6 font-serif">Live Coding Activity</h2>
+            <div className="bg-card border-2 rounded-lg p-6">
+              <figure className="w-full">
+                <embed 
+                  src="https://wakatime.com/share/@samuelforrest/26f47afe-455f-4b84-bdd5-b1b7822f3c57.svg"
+                  className="w-full h-auto"
+                />
+              </figure>
+            </div>
+          </div>
         </div>
       </main>
       <Footer />
