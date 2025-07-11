@@ -8,10 +8,12 @@ import { Button } from "@/components/ui/button";
 import { getAllBlogPosts, type BlogPost } from "@/services/blogService";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { SEO } from "@/components/SEO";
+import { Loader2 } from "lucide-react";
 
 const Blog = () => {
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
+  const [showSlowMessage, setShowSlowMessage] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   
   useEffect(() => {
@@ -23,11 +25,21 @@ const Blog = () => {
         console.error("Error fetching blog posts:", error);
       } finally {
         setLoading(false);
+        setShowSlowMessage(false);
       }
     }
 
     fetchPosts();
-  }, []);
+
+    // Set timeout for slow loading message
+    const timer = setTimeout(() => {
+      if (loading) {
+        setShowSlowMessage(true);
+      }
+    }, 7000);
+
+    return () => clearTimeout(timer);
+  }, [loading]);
 
   const categories = [...new Set(blogPosts.map(post => post.category))];
   
@@ -77,8 +89,16 @@ const Blog = () => {
           </div>
           
           {loading ? (
-            <div className="flex justify-center p-8">
-              <div className="animate-pulse">Loading posts...</div>
+            <div className="flex flex-col items-center justify-center p-8 space-y-4">
+              <Loader2 className="w-8 h-8 animate-spin text-primary" />
+              <div className="text-center">
+                <p className="text-muted-foreground">Loading posts...</p>
+                {showSlowMessage && (
+                  <p className="text-sm text-muted-foreground mt-2">
+                    The database is a bit busy right now...please wait
+                  </p>
+                )}
+              </div>
             </div>
           ) : filteredPosts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

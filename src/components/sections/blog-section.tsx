@@ -5,10 +5,12 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Link } from "react-router-dom";
 import { getAllBlogPosts, type BlogPost } from "@/services/blogService";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Loader2 } from "lucide-react";
 
 export function BlogSection() {
   const [featuredPosts, setFeaturedPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
+  const [showSlowMessage, setShowSlowMessage] = useState(false);
 
   useEffect(() => {
     async function fetchPosts() {
@@ -19,11 +21,21 @@ export function BlogSection() {
         console.error("Error fetching blog posts:", error);
       } finally {
         setLoading(false);
+        setShowSlowMessage(false);
       }
     }
 
     fetchPosts();
-  }, []);
+
+    // Set timeout for slow loading message
+    const timer = setTimeout(() => {
+      if (loading) {
+        setShowSlowMessage(true);
+      }
+    }, 7000);
+
+    return () => clearTimeout(timer);
+  }, [loading]);
 
   return (
     <section id="blog" className="section bg-secondary/30">
@@ -35,8 +47,16 @@ export function BlogSection() {
         
         <div className="space-y-6">
           {loading ? (
-            <div className="flex justify-center p-8">
-              <div className="animate-pulse">Loading posts...</div>
+            <div className="flex flex-col items-center justify-center p-8 space-y-4">
+              <Loader2 className="w-8 h-8 animate-spin text-primary" />
+              <div className="text-center">
+                <p className="text-muted-foreground">Loading posts...</p>
+                {showSlowMessage && (
+                  <p className="text-sm text-muted-foreground mt-2">
+                    The database is a bit busy right now...please wait
+                  </p>
+                )}
+              </div>
             </div>
           ) : featuredPosts.length > 0 ? (
             featuredPosts.map((post) => (
