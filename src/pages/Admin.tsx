@@ -96,10 +96,10 @@ const Admin = () => {
     <div className="min-h-screen bg-background p-8">
       <SEO
         title="Admin Portal | Samuel Forrest"
-        description="Admin, allowed users only"
+        description="Admin Portal"
         keywords="admin dashboard, blog management, content management, Samuel Forrest admin, website administration, samuelforrest.me"
-        ogTitle="Admin, allowed users only"
-        ogDescription="Administrative interface for managing blog posts and website content."
+        ogTitle="Admin Portal"
+        ogDescription="Admin Portal"
         canonicalUrl="https://samuelforrest.me/admin"
       />
       <div className="max-w-6xl mx-auto">

@@ -75,7 +75,7 @@ const BlogPost = () => {
       <SEO
         title={post?.title || "Blog Post"}
         description={post?.excerpt || "Read this blog post by Samuel Forrest covering technology, software development, and more."}
-        keywords={`${post?.title || "blog post"}, Samuel Forrest blog, ${post?.category || "technology"}, software development, programming, tech articles`}
+        keywords={`${post?.title || "blog post"}, Samuel Forrest blog, ${post?.category || "technology"}, software development, programming, tech articles, AI, AI article`}
         ogTitle={post?.title || "Blog Post - Samuel Forrest"}
         ogDescription={post?.excerpt || "Read this blog post by Samuel Forrest covering technology, software development, and more."}
         ogType="article"
