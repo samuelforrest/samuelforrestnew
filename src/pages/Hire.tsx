@@ -78,7 +78,7 @@ ${formData.name}`;
             <div className="text-center mb-8">
               <h1 className="text-3xl font-bold mb-4">Let's Work Together</h1>
               <p className="text-muted-foreground">
-                Ready to bring your web project to life? Fill out the form below and I'll get back to you within 24 hours.
+                Ready to bring your web project to life? Fill out the form below and I'll get back to you within 12 hours.
               </p>
             </div>
 
@@ -99,11 +99,11 @@ ${formData.name}`;
                     </div>
                     <div className="flex items-center gap-3">
                       <MapPin className="w-4 h-4 text-muted-foreground" />
-                      <span className="text-sm">London, UK</span>
+                      <span className="text-sm">Teddington, London, UK</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Clock className="w-4 h-4 text-muted-foreground" />
-                      <span className="text-sm">24-48h response time</span>
+                      <span className="text-sm">12h response time</span>
                     </div>
                   </CardContent>
                 </Card>
@@ -118,11 +118,12 @@ ${formData.name}`;
                   <CardContent>
                     <ul className="space-y-2 text-sm">
                       <li>• Full-stack web development</li>
+                      <li>• Simple landing page development</li>
                       <li>• Responsive design</li>
                       <li>• SEO optimization</li>
                       <li>• Website maintenance</li>
                       <li>• Performance optimization</li>
-                      <li>• E-commerce solutions</li>
+                      <li>• Flexible Web Hosting Solutions</li>
                     </ul>
                   </CardContent>
                 </Card>
