@@ -40,38 +40,39 @@ export function BlogSection() {
             </div>
           ) : featuredPosts.length > 0 ? (
             featuredPosts.map((post) => (
-              <Card key={post.id} className="animate-fade-in overflow-hidden">
-                <div className="flex flex-col md:flex-row h-full">
-                  <div className="md:w-1/4 h-48 md:h-auto">
-                    {post.cover_image && (
-                      <img 
-                        src={post.cover_image} 
-                        alt={post.title} 
-                        className="object-cover w-full h-full"
-                      />
-                    )}
-                    {!post.cover_image && (
-                      <div className="flex items-center justify-center w-full h-full bg-muted">
-                        <p className="text-muted-foreground">No image</p>
-                      </div>
-                    )}
+              <Link 
+                key={post.id} 
+                to={`/blog/${post.slug}`}
+                className="group block transform transition-all duration-300 hover:scale-105 hover:-translate-y-2"
+              >
+                <Card className="animate-fade-in overflow-hidden h-full backdrop-blur-sm bg-card/80 border border-border/50 group-hover:bg-card/90 group-hover:border-primary/30 group-hover:shadow-xl group-hover:shadow-primary/10 transition-all duration-300">
+                  <div className="flex flex-col md:flex-row h-full">
+                    <div className="md:w-1/4 h-48 md:h-auto">
+                      {post.cover_image && (
+                        <img 
+                          src={post.cover_image} 
+                          alt={post.title} 
+                          className="object-cover w-full h-full group-hover:brightness-110 transition-all duration-300"
+                        />
+                      )}
+                      {!post.cover_image && (
+                        <div className="flex items-center justify-center w-full h-full bg-secondary/50 backdrop-blur-sm group-hover:bg-primary/10 transition-all duration-300">
+                          <p className="text-muted-foreground group-hover:text-primary transition-colors duration-300">No image</p>
+                        </div>
+                      )}
+                    </div>
+                    <div className="md:w-3/4 flex flex-col">
+                      <CardHeader className="pb-2">
+                        <CardTitle className="group-hover:text-primary transition-colors duration-300">{post.title}</CardTitle>
+                        <CardDescription className="group-hover:text-foreground/80 transition-colors duration-300">{post.date}</CardDescription>
+                      </CardHeader>
+                      <CardContent className="pb-2 flex-grow">
+                        <p className="group-hover:text-foreground/90 transition-colors duration-300">{post.preview || post.excerpt}</p>
+                      </CardContent>
+                    </div>
                   </div>
-                  <div className="md:w-3/4 flex flex-col">
-                    <CardHeader className="pb-2">
-                      <CardTitle>{post.title}</CardTitle>
-                      <CardDescription>{post.date}</CardDescription>
-                    </CardHeader>
-                    <CardContent className="pb-2 flex-grow">
-                      <p>{post.preview || post.excerpt}</p>
-                    </CardContent>
-                    <CardFooter>
-                      <Link to={`/blog/${post.slug}`}>
-                        <Button variant="outline">Read Post</Button>
-                      </Link>
-                    </CardFooter>
-                  </div>
-                </div>
-              </Card>
+                </Card>
+              </Link>
             ))
           ) : (
             <Card className="text-center p-8">

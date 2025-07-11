@@ -39,7 +39,7 @@ export function ProjectsSection() {
 
   return (
     <section id="projects" className="section">
-      <div className="container">
+      <div className="container-narrow">
         <h2 className="section-heading">Projects</h2>
         <p className="text-lg text-muted-foreground mb-8 max-w-2xl">
           Here's a selection of personal projects I've been working on, showcasing my interests and skills.
@@ -47,34 +47,35 @@ export function ProjectsSection() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden animate-fade-in hover:shadow-md transition-shadow">
-              {project.imageUrl && (
-                <div className="h-48 w-full bg-secondary" />
-              )}
-              <CardHeader>
-                <CardTitle>{project.title}</CardTitle>
-                <CardDescription>{project.description}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, idx) => (
-                    <span 
-                      key={idx}
-                      className="px-2 py-1 bg-secondary rounded-md text-xs"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </CardContent>
-              {project.link && (
-                <CardFooter className="pt-0">
-                  <Button variant="link" className="p-0" asChild>
-                    <a href={project.link}>Learn more</a>
-                  </Button>
-                </CardFooter>
-              )}
-            </Card>
+            <a
+              key={index}
+              href={project.link}
+              className="group block transform transition-all duration-300 hover:scale-105 hover:-translate-y-2"
+              target={project.link?.startsWith('http') ? '_blank' : '_self'}
+              rel={project.link?.startsWith('http') ? 'noopener noreferrer' : undefined}
+            >
+              <Card className="overflow-hidden animate-fade-in h-full backdrop-blur-sm bg-card/80 border border-border/50 group-hover:bg-card/90 group-hover:border-primary/30 group-hover:shadow-xl group-hover:shadow-primary/10 transition-all duration-300">
+                {project.imageUrl && (
+                  <div className="h-48 w-full bg-secondary/50 backdrop-blur-sm" />
+                )}
+                <CardHeader className="pb-3">
+                  <CardTitle className="group-hover:text-primary transition-colors duration-300">{project.title}</CardTitle>
+                  <CardDescription className="group-hover:text-foreground/80 transition-colors duration-300">{project.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag, idx) => (
+                      <span 
+                        key={idx}
+                        className="px-2 py-1 bg-secondary/70 backdrop-blur-sm rounded-md text-xs group-hover:bg-primary/10 group-hover:text-primary transition-all duration-300"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </a>
           ))}
         </div>
       </div>

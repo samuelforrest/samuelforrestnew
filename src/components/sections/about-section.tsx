@@ -57,7 +57,7 @@ export function AboutSection() {
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-6 font-serif">Education</h3>
                 <div className="space-y-6">
-                  <div>
+                  <div className="border-l-2 border-primary/20 pl-4 hover:border-primary/40 transition-colors duration-200">
                     <div className="flex justify-between items-start mb-2">
                       <h4 className="font-medium">St George's College, Weybridge</h4>
                       <span className="text-sm text-muted-foreground">2024-Present</span>
@@ -65,13 +65,32 @@ export function AboutSection() {
                     <p className="text-sm text-muted-foreground mb-1">A Level Student</p>
                     <p className="text-sm">Computer Science, Mathematics, Physics, and EPQ</p>
                   </div>
-                  <div>
+                  <div className="border-l-2 border-primary/20 pl-4 hover:border-primary/40 transition-colors duration-200">
                     <div className="flex justify-between items-start mb-2">
                       <h4 className="font-medium">St George's College, Weybridge</h4>
                       <span className="text-sm text-muted-foreground">2021-2024</span>
                     </div>
                     <p className="text-sm text-muted-foreground mb-1">GCSE Student</p>
-                    <p className="text-sm">8x Grade 9s (A*) including Triple Science, Computer Science, RE, Geography, English Lang/Lit</p>
+                    <div className="text-xs space-y-1">
+                      <div className="flex flex-wrap gap-x-4 gap-y-1">
+                        <span>English Literature <strong>9</strong></span>
+                        <span>Biology <strong>9</strong></span>
+                        <span>Chemistry <strong>9</strong></span>
+                      </div>
+                      <div className="flex flex-wrap gap-x-4 gap-y-1">
+                        <span>English Language <strong>9</strong></span>
+                        <span>Latin <strong>7</strong></span>
+                        <span>Physics <strong>9</strong></span>
+                      </div>
+                      <div className="flex flex-wrap gap-x-4 gap-y-1">
+                        <span>Computing <strong>9</strong></span>
+                        <span>Mathematics <strong>8</strong></span>
+                        <span>Geography <strong>9</strong></span>
+                      </div>
+                      <div className="flex flex-wrap gap-x-4 gap-y-1">
+                        <span>Religious Studies <strong>9</strong></span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </CardContent>
@@ -99,7 +118,9 @@ export function AboutSection() {
                       <h5 className="font-medium">Freelance Web Developer</h5>
                       <span className="text-sm text-muted-foreground">May 2025-Present</span>
                     </div>
-                    <p className="text-sm">Delivering full-stack responsive websites to clients, providing maintenance and improving SEO. 3 paid projects delivered.</p>
+                    <p className="text-sm">Delivering full-stack responsive websites to clients, providing maintenance and improving SEO. 3 paid projects delivered.{" "}
+                      <a href="/hire" className="text-primary hover:underline font-medium">Hire Me</a>
+                    </p>
                   </div>
                   <div className="border-l-2 border-primary/20 pl-4 hover:border-primary/40 transition-colors duration-200">
                     <div className="flex justify-between items-start mb-2">

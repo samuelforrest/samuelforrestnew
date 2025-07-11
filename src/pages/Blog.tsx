@@ -83,39 +83,40 @@ const Blog = () => {
           ) : filteredPosts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {filteredPosts.map((post) => (
-                <Card key={post.id} className="animate-fade-in overflow-hidden">
-                  <div className="w-full h-48 bg-muted">
-                    {post.cover_image && (
-                      <img 
-                        src={post.cover_image} 
-                        alt={post.title} 
-                        className="object-cover w-full h-full"
-                      />
-                    )}
-                    {!post.cover_image && (
-                      <div className="flex items-center justify-center w-full h-full bg-muted">
-                        <p className="text-muted-foreground">No image</p>
-                      </div>
-                    )}
-                  </div>
-                  <CardHeader className="pb-2">
-                    <div className="mb-2">
-                      <span className="text-xs bg-secondary px-2 py-1 rounded-full">
-                        {post.category}
-                      </span>
+                <Link 
+                  key={post.id} 
+                  to={`/blog/${post.slug}`}
+                  className="group block transform transition-all duration-300 hover:scale-105 hover:-translate-y-2"
+                >
+                  <Card className="animate-fade-in overflow-hidden h-full backdrop-blur-sm bg-card/80 border border-border/50 group-hover:bg-card/90 group-hover:border-primary/30 group-hover:shadow-xl group-hover:shadow-primary/10 transition-all duration-300">
+                    <div className="w-full h-48 bg-muted">
+                      {post.cover_image && (
+                        <img 
+                          src={post.cover_image} 
+                          alt={post.title} 
+                          className="object-cover w-full h-full group-hover:brightness-110 transition-all duration-300"
+                        />
+                      )}
+                      {!post.cover_image && (
+                        <div className="flex items-center justify-center w-full h-full bg-secondary/50 backdrop-blur-sm group-hover:bg-primary/10 transition-all duration-300">
+                          <p className="text-muted-foreground group-hover:text-primary transition-colors duration-300">No image</p>
+                        </div>
+                      )}
                     </div>
-                    <CardTitle>{post.title}</CardTitle>
-                    <CardDescription>{post.date}</CardDescription>
-                  </CardHeader>
-                  <CardContent className="pb-2">
-                    <p>{post.preview || post.excerpt}</p>
-                  </CardContent>
-                  <CardFooter>
-                    <Link to={`/blog/${post.slug}`}>
-                      <Button variant="outline">Read Post</Button>
-                    </Link>
-                  </CardFooter>
-                </Card>
+                    <CardHeader className="pb-2">
+                      <div className="mb-2">
+                        <span className="text-xs bg-secondary/70 backdrop-blur-sm px-2 py-1 rounded-full group-hover:bg-primary/10 group-hover:text-primary transition-all duration-300">
+                          {post.category}
+                        </span>
+                      </div>
+                      <CardTitle className="group-hover:text-primary transition-colors duration-300">{post.title}</CardTitle>
+                      <CardDescription className="group-hover:text-foreground/80 transition-colors duration-300">{post.date}</CardDescription>
+                    </CardHeader>
+                    <CardContent className="pb-2">
+                      <p className="group-hover:text-foreground/90 transition-colors duration-300">{post.preview || post.excerpt}</p>
+                    </CardContent>
+                  </Card>
+                </Link>
               ))}
             </div>
           ) : (

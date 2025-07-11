@@ -14,6 +14,7 @@ import BlogPost from "./pages/BlogPost";
 import Projects from "./pages/Projects";
 import Admin from "./pages/Admin";
 import Auth from "./pages/Auth";
+import Hire from "./pages/Hire";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const App = () => (
                 <Route path="/blog/:slug" element={<BlogPost />} />
                 <Route path="/admin" element={<Admin />} />
                 <Route path="/auth" element={<Auth />} />
+                <Route path="/hire" element={<Hire />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
