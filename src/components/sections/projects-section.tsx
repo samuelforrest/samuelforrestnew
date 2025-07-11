@@ -13,13 +13,13 @@ export function ProjectsSection() {
   const projects: Project[] = [
     {
       title: "✍️ Blog",
-      description: "My blog where I explore Computer Science, AI and aviation topics in detail, sharing insights from my studies outside of school.",
+      description: "My blog where I explore Computer Science, AI and aviation topics in detail, sharing insights from my studies and projects outside of school.",
       tags: ["Writing", "Research"],
       link: "#blog",
     },
     {
       title: "✈️ EPQ (Extended Project Qualification)",
-      description: "For my EPQ, I researched the question: 'To what extent is it feasible to reintroduce commercial supersonic air travel by 2040?' This project involves a detailed investigation into the economic, environmental, regulatory, safety and technological factors.",
+      description: "For my EPQ, I researched the question: 'To what extent is it feasible to reintroduce commercial supersonic air travel by 2040?' This project involves a detailed investigation into the economic, environmental, regulatory, safety and technological factors. Public release due Sept 2025.",
       tags: ["Research", "Aviation", "Engineering"],
       link: "/assets/epq_abstract.pdf"
     },
@@ -32,7 +32,7 @@ export function ProjectsSection() {
     {
       title: "🎤 The Revision Podcast",
       description: "With the use of advanced AI, I have created a podcast in which 2 AI hosts discuss topics, or entire sylabbuss for A Level and GCSE, helping students who are auditory learners.",
-      tags: ["ChatGPT, Podcasting, Spotify, AI, Google NotebookLLM"],
+      tags: ["ChatGPT", "Podcasting", "Spotify", "AI", "Google NotebookLLM"],
       link: "https://open.spotify.com/show/568FPtKmIlTgWgaDAfap03"
     }
   ];
