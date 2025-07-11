@@ -25,8 +25,36 @@ const Hire = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
+    
+    // Create a well-structured email
+    const subject = `Project Inquiry: ${formData.projectType ? formData.projectType.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase()) : 'Web Development Project'}`;
+    
+    const body = `Hi Samuel,
+
+This form was from the hire page on samuelforrest.me. I'm interested in working with you on a web development project. Here are the details:
+
+PROJECT INFORMATION:
+• Project Type: ${formData.projectType ? formData.projectType.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase()) : 'Not specified'}
+• Budget Range: ${formData.budget ? formData.budget.replace('-', ' - £').replace('k', ',000').replace('plus', '+').replace('under', 'Under £') : 'Not specified'}
+• Timeline: ${formData.timeline ? formData.timeline.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase()) : 'Not specified'}
+
+PROJECT DESCRIPTION:
+${formData.description || 'No description provided'}
+
+CONTACT INFORMATION:
+• Name: ${formData.name}
+• Email: ${formData.email}
+• Company: ${formData.company || 'Not provided'}
+• Phone: ${formData.phone || 'Not provided'}
+
+Best regards,
+${formData.name}`;
+
+    // Create mailto link
+    const mailtoLink = `mailto:sam@samuelforrest.me?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -160,7 +188,6 @@ const Hire = () => {
                             <SelectItem value="new-website">New Website</SelectItem>
                             <SelectItem value="redesign">Website Redesign</SelectItem>
                             <SelectItem value="maintenance">Website Maintenance</SelectItem>
-                            <SelectItem value="ecommerce">E-commerce Store</SelectItem>
                             <SelectItem value="web-app">Web Application</SelectItem>
                             <SelectItem value="seo">SEO Optimization</SelectItem>
                             <SelectItem value="other">Other</SelectItem>
@@ -176,20 +203,20 @@ const Hire = () => {
                           className="grid grid-cols-2 gap-4 mt-2"
                         >
                           <div className="flex items-center space-x-2">
-                            <RadioGroupItem value="under-1k" id="under-1k" />
-                            <Label htmlFor="under-1k">Under £1,000</Label>
+                            <RadioGroupItem value="50-100" id="50-100" />
+                            <Label htmlFor="50-100">£50-100</Label>
                           </div>
                           <div className="flex items-center space-x-2">
-                            <RadioGroupItem value="1k-3k" id="1k-3k" />
-                            <Label htmlFor="1k-3k">£1,000 - £3,000</Label>
+                            <RadioGroupItem value="100-200" id="100-200" />
+                            <Label htmlFor="100-200">£100-200</Label>
                           </div>
                           <div className="flex items-center space-x-2">
-                            <RadioGroupItem value="3k-5k" id="3k-5k" />
-                            <Label htmlFor="3k-5k">£3,000 - £5,000</Label>
+                            <RadioGroupItem value="200-500" id="200-500" />
+                            <Label htmlFor="200-500">£200-£500</Label>
                           </div>
                           <div className="flex items-center space-x-2">
-                            <RadioGroupItem value="5k-plus" id="5k-plus" />
-                            <Label htmlFor="5k-plus">£5,000+</Label>
+                            <RadioGroupItem value="500-plus" id="500-plus" />
+                            <Label htmlFor="500-plus">£500+</Label>
                           </div>
                         </RadioGroup>
                       </div>
@@ -201,10 +228,9 @@ const Hire = () => {
                             <SelectValue placeholder="Select timeline" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="asap">ASAP</SelectItem>
-                            <SelectItem value="1-2-weeks">1-2 weeks</SelectItem>
-                            <SelectItem value="1-month">1 month</SelectItem>
-                            <SelectItem value="2-3-months">2-3 months</SelectItem>
+                            <SelectItem value="2days">2days</SelectItem>
+                            <SelectItem value="2-5days">2-5days</SelectItem>
+                            <SelectItem value="5-10days">5-10days</SelectItem>
                             <SelectItem value="flexible">Flexible</SelectItem>
                           </SelectContent>
                         </Select>
@@ -223,7 +249,7 @@ const Hire = () => {
                       </div>
 
                       <Button type="submit" className="w-full">
-                        Send Project Inquiry
+                        Send Project Inquiry (will compose an email message to Samuel)
                       </Button>
                     </form>
                   </CardContent>
