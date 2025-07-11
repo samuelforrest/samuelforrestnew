@@ -95,7 +95,7 @@ const Admin = () => {
   return (
     <div className="min-h-screen bg-background p-8">
       <SEO
-        title="Samuel Forrest | Admin"
+        title="Admin Portal | Samuel Forrest"
         description="Admin, allowed users only"
         keywords="admin dashboard, blog management, content management, Samuel Forrest admin, website administration, samuelforrest.me"
         ogTitle="Admin, allowed users only"

@@ -50,10 +50,10 @@ const Blog = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO
-        title="Samuel Forrest | Blog"
+        title="Blog | Samuel Forrest"
         description="Read Samuel Forrest's blog posts covering technology, software development, aviation, and AI."
         keywords="Samuel Forrest blog, technology blog, software development articles, programming tutorials, aviation blog, computer science blog, student developer blog, A Level Computer Science, coding insights, tech articles, programming tips, software engineering blog, AI, AI tools"
-        ogTitle="Samuel Forrest | Blog"
+        ogTitle="Blog | Samuel Forrest"
         ogDescription="Read Samuel Forrest's blog posts covering technology, software development, aviation, and AI."
         canonicalUrl="https://samuelforrest.me/blog"
       />

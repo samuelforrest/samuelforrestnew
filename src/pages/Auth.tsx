@@ -50,10 +50,10 @@ export default function Auth() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO
-        title="Sign In"
+        title="Sign In | Samuel Forrest"
         description="Sign in to your Samuel Forrest account to comment, like and engage with the blog."
         keywords="Samuel Forrest login, sign in, user account, blog comments, authentication, user registration, member access, samuelforrest.me"
-        ogTitle="Sign In - Samuel Forrest"
+        ogTitle="Sign In | Samuel Forrest"
         ogDescription="Sign in to your Samuel Forrest account to comment, like and engage with the blog."
         canonicalUrl="https://samuelforrest.me/auth"
       />

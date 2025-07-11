@@ -64,11 +64,11 @@ ${formData.name}`;
   return (
     <div className="min-h-screen flex flex-col">
       <SEO
-        title="Hire Me"
-        description="Get in touch to discuss your web development project. I specialize in full-stack responsive websites, maintenance, and SEO optimization."
-        keywords="hire web developer, freelance web development, full-stack developer, responsive websites, SEO optimization, Samuel Forrest"
-        ogTitle="Hire Samuel Forrest | Web Developer"
-        ogDescription="Get in touch to discuss your web development project. Specializing in full-stack responsive websites and SEO optimization."
+        title="Hire Me | Samuel Forrest"
+        description="Hire Samuel Forrest for your web development project. Specializing in full-stack responsive websites, SEO optimization, and performance enhancement. Fast turnaround, competitive rates."
+        keywords="hire web developer, freelance web development, full-stack developer, responsive websites, SEO optimization, Samuel Forrest, web developer for hire, website development services, London web developer, student web developer, affordable web development, custom websites, React developer, TypeScript developer, modern web development"
+        ogTitle="Hire Me | Samuel Forrest"
+        ogDescription="Need a website? Hire Samuel Forrest for professional web development services. Full-stack development, responsive design, SEO optimization. Quick turnaround, student-friendly rates."
         canonicalUrl="https://samuelforrest.me/hire"
       />
       <Header />

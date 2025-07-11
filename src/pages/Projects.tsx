@@ -8,7 +8,7 @@ const Projects = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO
-        title="Projects"
+        title="Projects | Samuel Forrest"
         description="A collection of Samuel's best projects: client websites, personal projects and Hackathon winners."
         keywords="Samuel Forrest projects, web development portfolio, client websites, React projects, JavaScript projects, Python projects, hackathon projects, bionewsweekly, zoecc, verdapp, QR generator, student developer portfolio, software engineering projects, zoecc.co.uk, verdapp.xyz, qr.samuelforrest.me, samuelforrest.me"
         ogTitle="Samuel Forrest | Projects"
