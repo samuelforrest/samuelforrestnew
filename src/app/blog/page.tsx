@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -9,6 +8,7 @@ import { getAllBlogPosts, type BlogPost } from "@/services/blogService";
 import { Loader2 } from "lucide-react";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
+
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -49,6 +49,7 @@ export default function BlogPage() {
     : blogPosts;
 
   return (
+
     <main className="flex flex-col min-h-[100dvh] space-y-10 px-4 py-8">
       <section id="blog-hero" className="max-w-4xl mx-auto w-full">
         <div className="space-y-8">

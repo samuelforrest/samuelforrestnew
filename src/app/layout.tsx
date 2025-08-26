@@ -15,10 +15,10 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: DATA.name,
+    default: "Samuel Forrest | CV",
     template: `%s | ${DATA.name}`,
   },
-  description: DATA.description,
+  description: `${DATA.name} is a Computer Science, Physics & Mathematics A-Level Student in London, an aspiring software engineer.`,
   icons: {
     icon: [
       {
