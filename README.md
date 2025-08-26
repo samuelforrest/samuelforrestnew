@@ -1,38 +1,45 @@
 # Portfolio V3
 
-> **The third iteration of my personal portfolio website - [www.samuelforrest.me](https://www.samuelforrest.me)**
+> **The third iteration of my personal portfolio website — [www.samuelforrest.me](https://www.samuelforrest.me)**
 
-My website was built with Next.js, featuring a blog post management system, animated UI components, and a clean, professional design.
+A modern portfolio website built with Next.js, featuring a blog management system, animated UI components, and a clean, professional design.
 
-## Features
+---
 
-- ** Modern Design**: Clean, responsive UI with dark/light theme support
-- ** Blog System**: Blog system, with backend connected with supabase
-- ** Animations**: Smooth animations using Framer Motion
-- ** Responsive**: Mobile-first design that works on all devices
-- ** Performance**: Optimized for speed and SEO - specifically, all images were converted to .webp file extensions - reducing website loading time by 50%
-- ** Theme Toggle**: Dark and light mode support, standard practice 2025.
-- ** Analytics**: Google Analytics integration
+## ✨ Features
 
-##  Tech Stack (AI Generated Summary):
+- **Modern Design:** Clean, responsive UI with dark/light theme support.
+- **Blog System:** Backend-powered blog using Supabase.
+- **Animations:** Smooth transitions powered by Framer Motion.
+- **Responsive:** Mobile-first design for all devices.
+- **Performance:** Optimized for speed and SEO — all images use `.webp`, reducing load time by 50%.
+- **Theme Toggle:** Easily switch between dark and light mode.
+- **Analytics:** Integrated with Google Analytics.
 
-### **Frontend Framework**
-- **[Next.js 14.2.4](https://nextjs.org/)** - React framework with App Router
-- **[React 18.3.1](https://react.dev/)** - UI library
-- **[TypeScript 5.4.5](https://www.typescriptlang.org/)** - Type safety
+---
 
-### **Styling & UI**
-- **[Tailwind CSS 3.4.4](https://tailwindcss.com/)** - Utility-first CSS framework
-- **[Radix UI](https://www.radix-ui.com/)** - Headless UI components
-  - Avatar, Icons, Label, Separator, Slot, Tooltip
-- **[Framer Motion 12.4.3](https://www.framer.com/motion/)** - Animation library
-- **[Lucide React](https://lucide.dev/)** - Beautiful icons
-- **[next-themes](https://github.com/pacocoursey/next-themes)** - Theme management
+## 🛠️ Tech Stack
 
-## Getting Started
+**Frontend Framework**
+- [Next.js 14.2.4](https://nextjs.org/) — React framework with App Router
+- [React 18.3.1](https://react.dev/) — UI library
+- [TypeScript 5.4.5](https://www.typescriptlang.org/) — Type safety
+
+**Styling & UI**
+- [Tailwind CSS 3.4.4](https://tailwindcss.com/) — Utility-first CSS framework
+- [Radix UI](https://www.radix-ui.com/) — Headless UI components  
+  <sub>Avatar, Icons, Label, Separator, Slot, Tooltip</sub>
+- [Framer Motion 12.4.3](https://www.framer.com/motion/) — Animation library
+- [Lucide React](https://lucide.dev/) — Beautiful icons
+- [next-themes](https://github.com/pacocoursey/next-themes) — Theme management
+
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
-- **Node.js 18+** 
+
+- **Node.js** `18+`
 - **npm** or **pnpm**
 
 ### Installation
@@ -51,7 +58,7 @@ My website was built with Next.js, featuring a blog post management system, anim
 3. **Set up environment variables**
    ```bash
    cp .env.local.example .env.local
-   # Add your environment variables
+   # Add your environment variables to .env.local
    ```
 
 4. **Run the development server**
@@ -59,7 +66,9 @@ My website was built with Next.js, featuring a blog post management system, anim
    npm run dev
    ```
 
-5. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
+5. **Open your browser**  
+   Go to [http://localhost:3000](http://localhost:3000)
 
+---
 
+Enjoy building!
