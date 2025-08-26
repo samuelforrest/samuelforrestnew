@@ -278,7 +278,7 @@ export const DATA = {
     },
     {
       title: "Bio News Weekly",
-      href: "https://companycritique.vercel.app/",
+      href: "https://bionewsweekly.com/",
       dates: "March 2025",
       active: true,
       description:
@@ -347,7 +347,7 @@ export const DATA = {
     },
     {
       title: "Zoe Cat Care",
-      href: "https://www.wapprentice.app/",
+      href: "https://www.zoecc.co.uk/",
       dates: "July 2025",
       active: true,
       description:
@@ -374,7 +374,7 @@ export const DATA = {
     },    
     {
       title: "ScreenFine",
-      href: "https://www.leaf-network.org",
+      href: "https://screenfine.netlify.app",
       dates: "May 2025",
       active: true,
       description:
@@ -420,7 +420,7 @@ export const DATA = {
     },
     {
       title: "EPQ",
-      href: "https://therevisionpodcast.netlify.app",
+      href: "",
       dates: "September 2024 - June 2025",
       active: true,
       description:
@@ -434,12 +434,12 @@ export const DATA = {
       links: [
         {
           type: "PDF Document",
-          href: "https://therevisionpodcast.netlify.app",
+          href: "/assets/epq_abstract.pdf",
           icon: <Icons.globe className="size-3" />,
         },
         {
           type: "Blog",
-          href: "https://open.spotify.com/show/568FPtKmIlTgWgaDAfap03?si=dd19efa73db94ba2",
+          href: "https://samuelforrest.me/blog/-epq-breakthrough-trump-removes-supersonic-transport-restrictions",
           icon: <Icons.blog className="size-3" />,
         }
       ],
@@ -447,7 +447,7 @@ export const DATA = {
     },
     {
       title: "Harvard CS50x Course",
-      href: "https://therevisionpodcast.netlify.app",
+      href: "",
       dates: "July 2024 - Present",
       active: true,
       description:
