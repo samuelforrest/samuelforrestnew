@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -92,6 +93,8 @@ export default function RootLayout({
             <Navbar />
           </TooltipProvider>
         </ThemeProvider>
+
+        <GoogleAnalytics gaId="G-TBLC7B9NCC"/>
       </body>
     </html>
   );
