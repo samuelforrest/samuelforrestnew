@@ -63,7 +63,7 @@ export default function BlogPage() {
             <BlurFadeText
               className="max-w-[600px] md:text-xl text-muted-foreground"
               delay={BLUR_FADE_DELAY * 2}
-              text="Thoughts, ideas, and insights on technology, aviation, and more."
+              text="Thoughts, ideas, and insights on technology, aviation, and more. All posts are FREE from AI Garbadge!"
             />
           </div>
         </div>
