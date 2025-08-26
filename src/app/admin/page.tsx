@@ -13,7 +13,6 @@ import "react-quill/dist/quill.snow.css";
 import { ChangeEvent, KeyboardEvent } from "react";
 import React from "react";
 
-// Dynamically import ReactQuill to avoid SSR issues
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 interface BlogFormData {
@@ -44,11 +43,10 @@ export default function AdminPage() {
     tags: []
   });
 
-  const ADMIN_PASSWORD = "samuelisthebest";
-
   const handlePasswordSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === ADMIN_PASSWORD) {
+    // Note: In a production app, this should be handled server-side
+    if (password === process.env.NEXT_PUBLIC_ADMIN_PASSWORD) {
       setIsAuthenticated(true);
       setShowPasswordError(false);
     } else {
@@ -183,7 +181,6 @@ export default function AdminPage() {
     );
   }
 
-  // Show password form if not authenticated
   if (!isAuthenticated) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background">
