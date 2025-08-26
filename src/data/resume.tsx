@@ -136,16 +136,16 @@ export const DATA = {
         "Incoming Work Experience at British Airways.",
     },
     {
-      company: "Software Engineering Job Simulation",
+      company: "JPMorgan & Chase",
       badges: [],
       href: "/#experience",
       location: "Remote",
-      title: "Software Engineer position",
+      title: "Software Engineer Job Simulation",
       logoUrl: "/jpmc.jpeg",
       start: "August 2025",
       end: "August 2025",
       description:
-        "",
+        "JPMorgan & Chase Job Simulation on Forage",
     },
     {
       company: "Step into Bath",
