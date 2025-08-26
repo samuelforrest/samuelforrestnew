@@ -248,7 +248,7 @@ export default function Page() {
 <section className="pb-4 mb-4">
   <BlurFade delay={BLUR_FADE_DELAY * 18}>
     <div className="text-center">
-      <p className="text-xs text-muted-foreground/70">
+      <p className="text-sm text-muted-foreground opacity-70">
         Website modified from Oluwatobi Salawu&apos;s{' '}
         <Link
           href="https://github.com/tobilobasalawu"
