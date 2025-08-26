@@ -495,7 +495,7 @@ export const DATA = {
       title: "Grade 4 Piano",
       location: "Home",
       description:
-        "Developed an AI chat Bot that blends humor, fun, and learning in a unique and interactive way. It uses engaging conversation techniques to motivate students and keep them focused while studying.",
+        "I was awarded Grade 4 Piano by ABRSM.",
       image:
         "/abrsm.webp",
       links: [
