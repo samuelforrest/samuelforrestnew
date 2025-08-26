@@ -95,7 +95,7 @@ export default function RootLayout({
         </ThemeProvider>
         
       </body>
-      <GoogleAnalytics gaId="G-TBLC7B9NCC"/>
+      <GoogleAnalytics gaId="G-TBLC7B9NCC" />
     </html>
   );
 }
