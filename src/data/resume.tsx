@@ -10,7 +10,7 @@ export const DATA = {
   description:
     "An aspiring Software Engineer and Entrepreneur, studying Maths, Physics, Computer Science, and EPQ at A Level. Private Tutor & Web Developer. Applying to Degree Apprenticeships & University.",
   summary:
-    "I started coding when I was 10, adventuring into HTML, CSS and Javascript. Fast forward to now I'm 17, studying A Levels at [St George's College, Weybridge](/#education),  while building [Tradelingo, an educational trading app for Gen Z](https://tradelingo.samuelforrest.me). Along the way, [I've completed work experience](/#work) with British Airways, the AIIB, Amazon, HUDJO and Virgin Atlantic, while building my skills in teaching and communication as a tutor and developer. I have also participated in Hackathons, worked on [projects](/#projects) and enjoyed my [extracurriculars.](/#extracurriculars)\n\nDo view my [Computing, AI and Aviation Blog.](/blog)",
+    "I started coding when I was 10, adventuring into HTML, CSS and Javascript. Fast forward to now I'm 17, studying A Levels at [St George's College, Weybridge](/#education),  while building [Tradelingo, an educational trading app for Gen Z](https://tradelingo.samuelforrest.me). Along the way, [I've completed work experience](/#work) with British Airways, the AIIB, Amazon, HUDJO and Virgin Atlantic, while building my skills in teaching and communication as a tutor and developer. I have also participated in Hackathons, worked on [projects](/#projects) and enjoyed my [extracurriculars.](/#extracurriculars)\n\nDo view my [Computing, AI and Aviation Blog.](/blog) and download my [CV.](/assets/cv.pdf)",
   avatarUrl: "/samuel-forrest-april-2025.webp",
   skills: [
     "JavaScript",
