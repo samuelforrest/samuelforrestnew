@@ -243,6 +243,15 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
+      
+      {/* Credit */}
+      <section className="pb-4 mb-4">
+        <BlurFade delay={BLUR_FADE_DELAY * 18}>
+          <div className="text-center">
+            <p className="text-xs text-muted-foreground/40">Website modified from Oluwatobi Salawu&apos;s Github</p>
+          </div>
+        </BlurFade>
+      </section>
     </main>
   );
 }
