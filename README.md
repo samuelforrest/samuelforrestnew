@@ -21,17 +21,17 @@ A modern portfolio website built with Next.js, featuring a blog management syste
 ##  Tech Stack
 
 **Frontend Framework**
-- [Next.js 14.2.4](https://nextjs.org/) — React framework with App Router
-- [React 18.3.1](https://react.dev/) — UI library
-- [TypeScript 5.4.5](https://www.typescriptlang.org/) — Type safety
+- [Next.js 14.2.4](https://nextjs.org/)
+- [React 18.3.1](https://react.dev/)
+- [TypeScript 5.4.5](https://www.typescriptlang.org/)=
 
 **Styling & UI**
-- [Tailwind CSS 3.4.4](https://tailwindcss.com/) — Utility-first CSS framework
-- [Radix UI](https://www.radix-ui.com/) — Headless UI components  
+- [Tailwind CSS 3.4.4](https://tailwindcss.com/)
+- [Radix UI](https://www.radix-ui.com/)
   <sub>Avatar, Icons, Label, Separator, Slot, Tooltip</sub>
-- [Framer Motion 12.4.3](https://www.framer.com/motion/) — Animation library
-- [Lucide React](https://lucide.dev/) — Beautiful icons
-- [next-themes](https://github.com/pacocoursey/next-themes) — Theme management
+- [Framer Motion 12.4.3](https://www.framer.com/motion/)
+- [Lucide React](https://lucide.dev/)
+- [next-themes](https://github.com/pacocoursey/next-themes)
 
 
 
