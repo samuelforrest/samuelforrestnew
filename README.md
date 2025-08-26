@@ -6,7 +6,7 @@ A modern portfolio website built with Next.js, featuring a blog management syste
 
 ---
 
-## ✨ Features
+##  Features
 
 - **Modern Design:** Clean, responsive UI with dark/light theme support.
 - **Blog System:** Backend-powered blog using Supabase.
@@ -18,7 +18,7 @@ A modern portfolio website built with Next.js, featuring a blog management syste
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 **Frontend Framework**
 - [Next.js 14.2.4](https://nextjs.org/) — React framework with App Router
@@ -35,7 +35,7 @@ A modern portfolio website built with Next.js, featuring a blog management syste
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
