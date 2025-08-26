@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Metadata } from "next";
 
 interface SEOProps {
   title: string;
@@ -12,57 +12,69 @@ interface SEOProps {
   robots?: string;
 }
 
-export const SEO = ({
+export const generateSEOMetadata = ({
   title,
   description,
   keywords,
   ogTitle,
   ogDescription,
   ogType = "website",
-  ogImage = "/assets/logo-samuelforrestwebsite.png",
+  ogImage = "/logo-samuelforrestwebsite.png",
   canonicalUrl,
   robots = "index, follow"
-}: SEOProps) => {
+}: SEOProps): Metadata => {
   const siteUrl = "https://samuelforrest.me";
   const fullTitle = `${title}`;
   const finalOgTitle = ogTitle || title;
   const finalOgDescription = ogDescription || description;
-  const finalCanonicalUrl = canonicalUrl || window.location.href;
 
-  return (
-    <Helmet>
-      {/* Primary Meta Tags */}
-      <title>{fullTitle}</title>
-      <meta name="title" content={fullTitle} />
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content="Samuel Forrest" />
-      <meta name="robots" content={robots} />
-      <meta name="googlebot" content={robots} />
-      <meta name="bingbot" content={robots} />
-      <link rel="canonical" href={finalCanonicalUrl} />
+  return {
+    title: fullTitle,
+    description: description,
+    keywords: keywords,
+    authors: [{ name: "Samuel Forrest" }],
+    robots: robots,
+    alternates: {
+      canonical: canonicalUrl || siteUrl,
+    },
+    openGraph: {
+      type: ogType as any,
+      title: finalOgTitle,
+      description: finalOgDescription,
+      images: [
+        {
+          url: `${siteUrl}${ogImage}`,
+          width: 1200,
+          height: 630,
+          alt: finalOgTitle,
+        },
+      ],
+      url: canonicalUrl || siteUrl,
+      siteName: "Samuel Forrest",
+      locale: "en_GB",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: finalOgTitle,
+      description: finalOgDescription,
+      images: [`${siteUrl}${ogImage}`],
+      creator: "@samuelforrest",
+    },
+    other: {
+      "rating": "General",
+      "distribution": "global",
+      "geo.region": "GB",
+      "geo.placename": "London, UK",
+      "language": "en",
+    },
+  };
+};
 
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={ogType} />
-      <meta property="og:title" content={finalOgTitle} />
-      <meta property="og:description" content={finalOgDescription} />
-      <meta property="og:image" content={`${siteUrl}${ogImage}`} />
-      <meta property="og:url" content={finalCanonicalUrl} />
-      <meta property="og:site_name" content="Samuel Forrest" />
-
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={finalOgTitle} />
-      <meta name="twitter:description" content={finalOgDescription} />
-      <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
-      <meta name="twitter:creator" content="@samuelforrest" />
-
-      {/* Additional SEO */}
-      <meta name="rating" content="General" />
-      <meta name="distribution" content="global" />
-      <meta name="geo.region" content="GB" />
-      <meta name="geo.placename" content="London, UK" />
-      <meta name="language" content="en" />
-    </Helmet>
-  );
+// For backward compatibility, export a component that can be used in pages
+// but recommend using generateSEOMetadata in layout.tsx or page.tsx files
+export const SEO = (props: SEOProps) => {
+  // This component is now deprecated in favor of generateSEOMetadata
+  // It returns null as metadata should be handled at the page/layout level in Next.js 14
+  console.warn("SEO component is deprecated. Use generateSEOMetadata in your page.tsx or layout.tsx instead.");
+  return null;
 };
