@@ -6,10 +6,7 @@ import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
-import { cn } from "@/lib/utils";
-import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text";
 import Link from "next/link";
-import { ArrowRightIcon } from "@radix-ui/react-icons";
 import Markdown from "react-markdown";
 const BLUR_FADE_DELAY = 0.04;
 
@@ -168,7 +165,7 @@ export default function Page() {
       </section>
       
 
-      <section id="hackathons">
+      <section id="extracurriculars">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
