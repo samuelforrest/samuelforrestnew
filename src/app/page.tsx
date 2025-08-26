@@ -244,22 +244,21 @@ export default function Page() {
         </div>
       </section>
       
-      {/* Credit */}
-<section className="pb-4 mb-4">
-  <BlurFade delay={BLUR_FADE_DELAY * 18}>
-    <div className="text-center">
-      <p className="text-sm text-muted-foreground opacity-70">
-        Website modified from Oluwatobi Salawu&apos;s{' '}
-        <Link
-          href="https://github.com/tobilobasalawu"
-          className="text-blue-500 hover:underline"
-        >
-          Github
-        </Link>
-      </p>
-    </div>
-  </BlurFade>
-</section>
+      <section className="pb-4 mb-4">
+        <BlurFade delay={BLUR_FADE_DELAY * 18}>
+          <div className="text-center">
+            <p className="text-sm text-muted-foreground opacity-70">
+              Website modified from Oluwatobi Salawu&apos;s{' '}
+              <Link
+                href="https://github.com/tobilobasalawu"
+                className="text-blue-500 hover:underline"
+              >
+                Github
+              </Link>
+            </p>
+          </div>
+        </BlurFade>
+      </section>
     </main>
   );
 }
