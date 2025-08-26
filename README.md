@@ -4,7 +4,7 @@
 
 A modern portfolio website built with Next.js, featuring a blog management system, animated UI components, and a clean, professional design.
 
----
+
 
 ##  Features
 
@@ -16,7 +16,7 @@ A modern portfolio website built with Next.js, featuring a blog management syste
 - **Theme Toggle:** Easily switch between dark and light mode.
 - **Analytics:** Integrated with Google Analytics.
 
----
+
 
 ##  Tech Stack
 
@@ -33,7 +33,7 @@ A modern portfolio website built with Next.js, featuring a blog management syste
 - [Lucide React](https://lucide.dev/) — Beautiful icons
 - [next-themes](https://github.com/pacocoursey/next-themes) — Theme management
 
----
+
 
 ##  Getting Started
 
