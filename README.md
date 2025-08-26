@@ -71,4 +71,3 @@ A modern portfolio website built with Next.js, featuring a blog management syste
 
 ---
 
-Enjoy building!
