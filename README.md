@@ -23,7 +23,7 @@ A modern portfolio website built with Next.js, featuring a blog management syste
 **Frontend Framework**
 - [Next.js 14.2.4](https://nextjs.org/)
 - [React 18.3.1](https://react.dev/)
-- [TypeScript 5.4.5](https://www.typescriptlang.org/)=
+- [TypeScript 5.4.5](https://www.typescriptlang.org/)
 
 **Styling & UI**
 - [Tailwind CSS 3.4.4](https://tailwindcss.com/)
