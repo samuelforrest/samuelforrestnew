@@ -4,7 +4,7 @@
 
 My website was built with Next.js, featuring a blog post management system, animated UI components, and a clean, professional design.
 
-## ✨ Features
+## Features
 
 - ** Modern Design**: Clean, responsive UI with dark/light theme support
 - ** Blog System**: Blog system, with backend connected with supabase
@@ -14,7 +14,7 @@ My website was built with Next.js, featuring a blog post management system, anim
 - ** Theme Toggle**: Dark and light mode support, standard practice 2025.
 - ** Analytics**: Google Analytics integration
 
-## 🛠️ Tech Stack (AI Generated Summary):
+##  Tech Stack (AI Generated Summary):
 
 ### **Frontend Framework**
 - **[Next.js 14.2.4](https://nextjs.org/)** - React framework with App Router
@@ -29,7 +29,7 @@ My website was built with Next.js, featuring a blog post management system, anim
 - **[Lucide React](https://lucide.dev/)** - Beautiful icons
 - **[next-themes](https://github.com/pacocoursey/next-themes)** - Theme management
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - **Node.js 18+** 
