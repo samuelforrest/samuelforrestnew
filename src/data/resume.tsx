@@ -11,7 +11,7 @@ export const DATA = {
     "An aspiring Software Engineer and Entrepreneur, studying Maths, Physics, Computer Science, and EPQ at A Level. Private Tutor & Web Developer. Applying to Degree Apprenticeships & University.",
   summary:
     "I started coding when I was 10, adventuring into HTML, CSS and Javascript. Fast forward to now I'm 17, studying A Levels at [St George's College, Weybridge](/#education),  while building [Tradelingo, an educational trading app for Gen Z](https://tradelingo.samuelforrest.me). Along the way, [I've completed work experience](/#work) with British Airways, the AIIB, Amazon, HUDJO and Virgin Atlantic, while building my skills in teaching and communication as a tutor and developer. I have also participated in Hackathons, worked on [projects](/#projects) and enjoyed my [extracurriculars.](/#extracurriculars)\n\nDo view my [Computing, AI and Aviation Blog.](/blog)",
-  avatarUrl: "/me.jpeg",
+  avatarUrl: "/samuel-forrest-april-2025.webp",
   skills: [
     "JavaScript",
     "TypeScript",
@@ -101,11 +101,11 @@ export const DATA = {
   work: [
     {
       company: "Superprof",
-      href: "https://pathera.app",
+      href: "https://superprof.com",
       badges: [],
       location: "Remote",
       title: "Private Tutor",
-      logoUrl: "/superprof.png",
+      logoUrl: "/superprof.webp",
       start: "Sep 2024",
       end: "Present",
       description:
@@ -113,11 +113,11 @@ export const DATA = {
     },
     {
       company: "Freelance Web Developer",
-      href: "https://headstarter.co/",
+      href: "/#projects",
       badges: [],
       location: "Remote",
       title: "Full-stack",
-      logoUrl: "/webdeveloper.jpeg",
+      logoUrl: "/webdeveloper.webp",
       start: "March 2025",
       end: "Present",
       description:
@@ -129,7 +129,7 @@ export const DATA = {
       badges: [],
       location: "In-person work experience",
       title: "In-person work expereicence",
-      logoUrl: "/ba.png",
+      logoUrl: "/britishairways.webp",
       start: "August 2025",
       end: "August 2025",
       description:
@@ -138,10 +138,10 @@ export const DATA = {
     {
       company: "JPMorgan & Chase",
       badges: [],
-      href: "/#experience",
+      href: "https://jpmorganchase.com",
       location: "Remote",
       title: "Software Engineer Job Simulation",
-      logoUrl: "/jpmc.jpeg",
+      logoUrl: "/jpmc.webp",
       start: "August 2025",
       end: "August 2025",
       description:
@@ -150,10 +150,10 @@ export const DATA = {
     {
       company: "Step into Bath",
       badges: [],
-      href: "/#experience",
+      href: "https://bath.ac.uk",
       location: "In Person",
       title: "In person residential course",
-      logoUrl: "/bathuni.jpeg",
+      logoUrl: "/bath.webp",
       start: "July 2025",
       end: "July 2025",
       description:
@@ -162,10 +162,10 @@ export const DATA = {
     {
       company: "Amazon",
       badges: [],
-      href: "/#experience",
+      href: "https://amazon.co.uk",
       location: "Virtual",
       title: "Virtual work experience",
-      logoUrl: "/amazon.png",
+      logoUrl: "/amazon.webp",
       start: "July 2025",
       end: "July 2025",
       description:
@@ -174,10 +174,10 @@ export const DATA = {
     {
       company: "Air Accidents Investigation Branch",
       badges: [],
-      href: "/#experience",
+      href: "https://www.gov.uk/government/organisations/air-accidents-investigation-branch",
       location: "Virtual",
       title: "In-person work experience",
-      logoUrl: "/aaib.png",
+      logoUrl: "/aaib.webp",
       start: "July 2025",
       end: "July 2025",
       description:
@@ -186,7 +186,7 @@ export const DATA = {
     {
       company: "HUDJO",
       badges: [],
-      href: "/#experience",
+      href: "https://hudjo.com",
       location: "Virtual",
       title: "Shadowed a founding software engineer",
       logoUrl: "/hudjo.webp",
@@ -198,10 +198,10 @@ export const DATA = {
     {
       company: "VATSIM",
       badges: [],
-      href: "/#experience",
+      href: "https://vatsim.net",
       location: "Virtual",
       title: "Virtual Pilot & Air Traffic Controller",
-      logoUrl: "/vatsim.png",
+      logoUrl: "/vatsim.webp",
       start: "Jul 2023",
       end: "Present",
       description:
@@ -210,10 +210,10 @@ export const DATA = {
     {
       company: "Virgin Atlantic x Kingston University",
       badges: [],
-      href: "/#experience",
+      href: "https://virginatlantic.com",
       location: "Virtual",
       title: "In-person residential course",
-      logoUrl: "/virgin.avif",
+      logoUrl: "/virgin.webp",
       start: "August 2024",
       end: "August 2024",
       description:
@@ -222,10 +222,10 @@ export const DATA = {
     {
       company: "Audio & Visuals Team",
       badges: [],
-      href: "/#experience",
+      href: "https://stmichaelsfulwell.co.uk",
       location: "Virtual",
       title: "Long-term volunteering",
-      logoUrl: "/stmichaelsfulwell.jpg",
+      logoUrl: "/stmichaels.webp",
       start: "December 2017",
       end: "June 2023",
       description:
@@ -237,7 +237,7 @@ export const DATA = {
       school: "St George's College, Weybridge",
       href: "https://www.stgeorgesweybridge.com/",
       degree: "GCSE Grades: 9999999987 | A Levels: Computing (A*), Physics (A), Maths (B), EPQ (A) predicted",
-      logoUrl: "/sgc.jpg",
+      logoUrl: "/sgc.webp",
       start: "2024",
       end: "2026",
     },
@@ -245,7 +245,7 @@ export const DATA = {
       school: "Newland House School, Teddington",
       href: "https://www.newlandhouse.net/",
       degree: "KS3 | Awards in Achievement, Mathematics, Geography, Computer Science, French.",
-      logoUrl: "/newlandhouse.jpeg",
+      logoUrl: "/nhs.webp",
       start: "2012",
       end: "2021",
     },
@@ -274,7 +274,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/tradelingo.png",
+      image: "/tradelingo.webp",
     },
     {
       title: "Bio News Weekly",
@@ -309,7 +309,7 @@ export const DATA = {
           icon: <Icons.blog className="size-3" />,
         },
       ],
-      image: "/bionews.png",
+      image: "/bionewsweekly.webp",
       
     },
     {
@@ -343,7 +343,7 @@ export const DATA = {
           icon: <Icons.blog className="size-3" />,
         },
       ],
-      image: "/verda.png",
+      image: "/logo-verdapp.webp",
     },
     {
       title: "Zoe Cat Care",
@@ -370,7 +370,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/zoecc.png",
+      image: "/zoecc.webp",
     },    
     {
       title: "ScreenFine",
@@ -389,7 +389,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         }
       ],
-      image: "/screenfine.png",
+      image: "/screenfine.webp",
     },
     {
       title: "The Revision Podcast",
@@ -416,7 +416,7 @@ export const DATA = {
           icon: <Icons.mic className="size-3" />,
         }
       ],
-      image: "/therevisionpodcast.png",
+      image: "/therevisionpodcast.webp",
     },
     {
       title: "EPQ",
@@ -443,7 +443,7 @@ export const DATA = {
           icon: <Icons.blog className="size-3" />,
         }
       ],
-      image: "/epq.jpg",
+      image: "/boom.webp",
     },
     {
       title: "Harvard CS50x Course",
@@ -467,7 +467,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/cs50.jpg",
+      image: "/cs50.webp",
     },
   ],
   extracurriculars: [
@@ -477,7 +477,7 @@ export const DATA = {
       description:
         "My school awarded me an academic scholarship for outstanding performance inside and outside of class.",
       image:
-        "/sgc.jpg",
+        "/sgc.webp",
       links: [
       ],
     },
@@ -487,7 +487,7 @@ export const DATA = {
       description:
         "I was awarded Grade 7 Saxophone by MTB. I participate regularly in Jazz Band and Concert Band, developing discipline, teamwork, confidence and performance skills.",
       image:
-        "/mtb.jpg",
+        "/mtb.webp",
       links: [
       ],
     },
@@ -497,7 +497,7 @@ export const DATA = {
       description:
         "Developed an AI chat Bot that blends humor, fun, and learning in a unique and interactive way. It uses engaging conversation techniques to motivate students and keep them focused while studying.",
       image:
-        "/abrsm.png",
+        "/abrsm.webp",
       links: [
       ],
     },
@@ -507,7 +507,7 @@ export const DATA = {
       description:
         "Developed Verda, an AI CO2 emission calculator and Machine Learning Trash sorter, winning KTHack25 £300 prize with my teammate.",
       image:
-        "/ktbyte.jpg",
+        "/kthack.webp",
       links: [
       ],
     },
@@ -518,7 +518,7 @@ export const DATA = {
         "Completed 40 hours of volunteering and around 40 hours of skills (coding).  ",
       icon: "public",
       image:
-        "/dofe.png",
+        "/dofe.webp",
       links: [
       ],
     },
@@ -528,7 +528,7 @@ export const DATA = {
       description:
         "Average typing speed, on monkeytype.",
       image:
-        "/typing.png",
+        "/monkeytype.webp",
       links: [
       ],
     },
@@ -539,7 +539,7 @@ export const DATA = {
         "Yearly participation of Bebras Challenge in-school  ",
       icon: "public",
       image:
-        "/bebras.png",
+        "/bebras.webp",
       links: [
       ],
     },
@@ -549,7 +549,7 @@ export const DATA = {
       description:
         "I participate in the UK Maths Trust Challenge yearly, latest award was Bronze.",
       image:
-        "/ukmt.jpeg",
+        "/ukmt.webp",
       links: [
       ],
     },
@@ -559,7 +559,7 @@ export const DATA = {
       description:
         "I listen to podcasts daily, my favourites including the Diary of a CEO, Lightcone Podcast (Y-Combinator) and Mentour Piot",
       image:
-        "/doac.jpeg",
+        "/doac.webp",
       links: [
       ],
     },
@@ -569,7 +569,7 @@ export const DATA = {
       description:
         "I cycled London to Brighton (£500 raised), London to Paris (£500 raised), London to Bath, and Vienna to Budapest via Bratislava (Danube River).",
       image:
-        "/bike.jpg",
+        "/bike.webp",
       links: [
       ],
     },
@@ -589,7 +589,7 @@ export const DATA = {
       description:
         "Dedicated 8 hours a week to the Rowing Club from 2021-2025.",
       image:
-        "/sgc.jpg",
+        "/sgc.webp",
       links: [
       ],
     },
@@ -599,7 +599,7 @@ export const DATA = {
       description:
         "Writing my opinions on the latest news.",
       image:
-        "sf.png",
+        "web-app-manifest-192x192.png",
       links: [
       ],
     },
@@ -609,7 +609,7 @@ export const DATA = {
       description:
         "Apprentice Nation is an award-winning platform that unites major brands, top UK talent and the power of music to inspire and engage youth into careers they love.",
       image:
-        "apprenticenation.jpeg",
+        "apprenticenation_logo.webp",
       links: [
       ],
     },
@@ -619,7 +619,7 @@ export const DATA = {
       description:
         "A student network for aspiring young professionals/students for Law, Engineering/tech and Finance.",
       image:
-        "leaf.jpeg",
+        "leaf.webp",
       links: [
       ],
     },
