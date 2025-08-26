@@ -93,9 +93,9 @@ export default function RootLayout({
             <Navbar />
           </TooltipProvider>
         </ThemeProvider>
-
-        <GoogleAnalytics gaId="G-TBLC7B9NCC"/>
+        
       </body>
+      <GoogleAnalytics gaId="G-TBLC7B9NCC"/>
     </html>
   );
 }
