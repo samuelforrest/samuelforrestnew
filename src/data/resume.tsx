@@ -1,6 +1,5 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon, Mic } from "lucide-react";
-import { on, title } from "process";
 
 export const DATA = {
   name: "Samuel Forrest",
