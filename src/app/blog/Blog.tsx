@@ -1,13 +1,10 @@
 
 import { useState, useEffect } from "react";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { getAllBlogPosts, type BlogPost } from "@/services/blogService";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Loader2 } from "lucide-react";
+import Link from "next/link";
 
 const Blog = () => {
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
@@ -48,15 +45,6 @@ const Blog = () => {
 
   return (
   <div className="min-h-screen flex flex-col bg-gradient-to-br from-background via-muted/60 to-primary/10">
-      <SEO
-        title="Blog | Samuel Forrest"
-        description="Read Samuel Forrest's blog posts covering technology, software development, aviation, and AI."
-        keywords="Samuel Forrest blog, technology blog, software development articles, programming tutorials, aviation blog, computer science blog, student developer blog, A Level Computer Science, coding insights, tech articles, programming tips, software engineering blog, AI, AI tools, AI Blog, AI prompting, AI prompting course"
-        ogTitle="Blog | Samuel Forrest"
-        ogDescription="Read Samuel Forrest's blog posts covering technology, software development, aviation, and AI."
-        canonicalUrl="https://samuelforrest.me/blog"
-      />
-      <Header />
       
       <main className="flex-grow mt-20 pt-6">
         <div className="container-narrow px-4">
@@ -104,7 +92,7 @@ const Blog = () => {
               {filteredPosts.map((post) => (
                 <Link 
                   key={post.id} 
-                  to={`/blog/${post.slug}`}
+                  href={`/blog/${post.slug}`}
                   className="group block transform transition-all duration-300 hover:scale-105 hover:-translate-y-2"
                 >
                   <Card className="overflow-hidden h-full rounded-2xl shadow-lg border border-border/40 bg-card/80 backdrop-blur-md group-hover:bg-card/90 group-hover:border-primary/30 group-hover:shadow-2xl group-hover:shadow-primary/10 transition-all duration-300">
@@ -145,8 +133,6 @@ const Blog = () => {
           )}
         </div>
       </main>
-      
-      <Footer />
     </div>
   );
 };

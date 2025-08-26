@@ -3,11 +3,9 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { RichTextEditor } from "./RichTextEditor";
 import { supabase } from "@/integrations/supabase/client";
-import { toast } from "sonner";
 import type { BlogPost } from "@/services/blogService";
 
 interface BlogPostFormProps {
@@ -71,23 +69,8 @@ export function BlogPostForm({ post, onSave, onCancel }: BlogPostFormProps) {
           .from('blogs')
           .update(postData)
           .eq('id', post.id);
-
-        if (error) throw error;
-        toast.success("Blog post updated successfully!");
-      } else {
-        // Create new post
-        const { error } = await supabase
-          .from('blogs')
-          .insert([postData]);
-
-        if (error) throw error;
-        toast.success("Blog post created successfully!");
-      }
-
       onSave();
-    } catch (error) {
-      console.error("Error saving blog post:", error);
-      toast.error("Failed to save blog post");
+    }
     } finally {
       setLoading(false);
     }
@@ -126,13 +109,6 @@ export function BlogPostForm({ post, onSave, onCancel }: BlogPostFormProps) {
 
           <div>
             <Label htmlFor="preview">Preview</Label>
-            <Textarea
-              id="preview"
-              value={preview}
-              onChange={(e) => setPreview(e.target.value)}
-              placeholder="Short preview text for blog listings"
-              rows={3}
-            />
           </div>
 
           <div>
