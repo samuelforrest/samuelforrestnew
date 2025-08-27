@@ -205,7 +205,7 @@ export const DATA = {
       start: "Jul 2023",
       end: "Present",
       description:
-        "Flight simulation enthusiast, an active member of VATSIM as a pilot and air traffic controller, developing strong multitasking, quick decision-mkaing and stress management skills as I work towards becoming an S1 controller at vACC Switzerland (part of Vatsim Europe)",
+        "Flight simulation enthusiast, an active member of VATSIM as a pilot and trainee air traffic controller, developing strong multitasking, quick decision-mkaing and stress management skills.",
     },
     {
       company: "Virgin Atlantic x Kingston University",
