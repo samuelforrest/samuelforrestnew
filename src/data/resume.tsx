@@ -77,19 +77,19 @@ export const DATA = {
         icon: Icons.x,
         navbar: true,
       },
-      Insta: {
+      Instagram: {
         name: "Instagram",
         url: "https://instagram.com/samueljforrest/",
         icon: Icons.instagram,
         navbar: true,
       },
-      email: {
+      Email: {
         name: "Email",
         url: "mailto:sam@samuelforrest.me",
         icon: Icons.email,
         navbar: true,
       },
-      cv: {
+      CV: {
         name: "CV",
         url: "https://samuelforrest.me/assets/cv.pdf",
         icon: Icons.cv,
