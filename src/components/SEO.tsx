@@ -70,11 +70,7 @@ export const generateSEOMetadata = ({
   };
 };
 
-// For backward compatibility, export a component that can be used in pages
-// but recommend using generateSEOMetadata in layout.tsx or page.tsx files
 export const SEO = (props: SEOProps) => {
-  // This component is now deprecated in favor of generateSEOMetadata
-  // It returns null as metadata should be handled at the page/layout level in Next.js 14
   console.warn("SEO component is deprecated. Use generateSEOMetadata in your page.tsx or layout.tsx instead.");
   return null;
 };

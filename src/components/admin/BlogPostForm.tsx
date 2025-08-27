@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -25,13 +24,12 @@ export function BlogPostForm({ post, onSave, onCancel }: BlogPostFormProps) {
   const [tags, setTags] = useState(post?.tags?.join(", ") || "");
   const [loading, setLoading] = useState(false);
 
-  // Generate slug from title
   const generateSlug = (title: string) => {
     return title
       .toLowerCase()
-      .replace(/[^\w\s-]/g, '') // Remove special characters
-      .replace(/\s+/g, '-') // Replace spaces with hyphens
-      .replace(/-+/g, '-') // Replace multiple hyphens with single hyphen
+      .replace(/[^\w\s-]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-')
       .trim();
   };
 
@@ -39,8 +37,8 @@ export function BlogPostForm({ post, onSave, onCancel }: BlogPostFormProps) {
     const newTitle = e.target.value;
     setTitle(newTitle);
     
-    // Auto-generate slug if it's empty or matches the previous title's slug
-    if (!slug || slug === generateSlug(post?.title || "")) {
+    // Only auto-generate slug for new posts (when there's no existing post ID)
+    if (!post?.id && !slug) {
       setSlug(generateSlug(newTitle));
     }
   };
@@ -64,7 +62,6 @@ export function BlogPostForm({ post, onSave, onCancel }: BlogPostFormProps) {
       };
 
       if (post?.id) {
-        // Update existing post
         const { error } = await supabase
           .from('blogs')
           .update(postData)
@@ -101,9 +98,11 @@ export function BlogPostForm({ post, onSave, onCancel }: BlogPostFormProps) {
               onChange={(e) => setSlug(e.target.value)}
               placeholder="url-friendly-version-of-title"
               required
+              disabled={!!post?.id}
             />
             <p className="text-sm text-muted-foreground mt-1">
               This will be used in the URL: /blog/{slug}
+              {post?.id && " (Cannot be changed for existing posts)"}
             </p>
           </div>
 

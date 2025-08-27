@@ -45,7 +45,6 @@ export default function AdminPage() {
 
   const handlePasswordSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Note: In a production app, this should be handled server-side
     if (password === process.env.NEXT_PUBLIC_ADMIN_PASSWORD) {
       setIsAuthenticated(true);
       setShowPasswordError(false);
