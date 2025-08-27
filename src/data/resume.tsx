@@ -191,7 +191,7 @@ export const DATA = {
       title: "Shadowed a founding software engineer",
       logoUrl: "/hudjo.webp",
       start: "August 2024",
-      end: "October 2024",
+      end: "November 2024",
       description:
         "Explored cross-platform mobile app development by shadowing a startup developer at HUDJO, an app focused on bike parking solutions at local buisnesses in London, which recently recieved funding from Deliveroo. I was introduced to Javascript, Typescript and the Expo framwork, learning how cross-platform apps are built, from a former Google & Yandex software engineer.",
     },
@@ -205,7 +205,7 @@ export const DATA = {
       start: "Jul 2023",
       end: "Present",
       description:
-        "Flight simulation enthusiast, an active member of VATSIM as a pilot and trainee air traffic controller, developing strong multitasking, quick decision-mkaing and stress management skills.",
+        "Flight simulation enthusiast, an active member of VATSIM as a pilot and trainee air traffic controller, developing strong multitasking, quick decision-making and stress management skills.",
     },
     {
       company: "Virgin Atlantic x Kingston University",
