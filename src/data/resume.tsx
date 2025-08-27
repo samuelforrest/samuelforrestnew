@@ -128,7 +128,7 @@ export const DATA = {
       href: "https://britishairways.com",
       badges: [],
       location: "In-person work experience",
-      title: "In-person work expereicence",
+      title: "In-person work experience",
       logoUrl: "/britishairways.webp",
       start: "August 2025",
       end: "August 2025",
